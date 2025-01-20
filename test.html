@@ -1,0 +1,419 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mx-auto flex items-center justify-between bg-white px-0 py-4 lg:py-8"><a
+            class="z-50 flex-1 text-3xl font-semibold no-underline lg:flex-initial" href="./error.html"><img
+                alt="" aria-label="Логотип diaTribe" fetchpriority="high" loading="eager" width="241"
+                height="88.58" decoding="async" data-nimg="1" style="color:transparent" src="./assets/icons/logo.jpg"
+                _mstalt="196560" _msthash="2" _mstaria-label="196560"></a><a
+            class="relative z-50 flex-1 py-1 text-right text-lg font-bold text-secondary hover:underline lg:hidden lg:flex-initial"
+            href="./error.html" _msttexthash="2387801" _msthash="3">Подписываться</a>
+        <nav class="order-first flex-1 lg:order-last lg:flex-initial">
+            <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between"><button
+                    data-collapse-toggle="navbar-default" type="button"
+                    class="z-50 inline-flex flex-col items-center rounded-lg py-4 hover:bg-white lg:hidden"
+                    aria-controls="navbar-default" aria-expanded="true" aria-pressed="true"
+                    aria-label="Закрыть навигацию" _mstaria-label="285051" _msthash="259"><span class="sr-only"
+                        _msttexthash="3931915" _msthash="260">Открыть главное меню</span><span
+                        class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 top-[6px] rotate-45"></span><span
+                        class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 opacity-0"></span><span
+                        class="ease-[cubic-bezier(0.25, 0.75, 1)] relative block h-[2px] w-[30px] bg-black duration-300 top-[-6px] -rotate-45"></span></button>
+                <div class="fixed left-0 top-0 z-40 flex h-screen w-full flex-col items-start bg-white px-5 pt-28 md:pt-32 lg:relative lg:block lg:size-auto lg:flex-row lg:px-0 lg:pt-0 block"
+                    id="navbar-default">
+                    <div class="mb-6 flex w-full items-center justify-end">
+                        <form class="relative inline-flex w-full items-center lg:mx-4 lg:w-auto"><button
+                                class="inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:text-accent-foreground text-lg h-12 icon-magnifier--no-bg-color siez-10 absolute right-0 z-10 rounded-lg bg-center bg-no-repeat p-0 hover:bg-gray-light"
+                                type="submit" aria-label="Search" _msthidden="A" _mstaria-label="74607"
+                                _msthash="261"></button></form><a
+                            href="https://diatribe.app.neoncrm.com/forms/22" target="_blank"
+                            class="ms-4 hidden rounded-md bg-primary px-5 py-1 text-lg font-bold text-white duration-200 ease-in-out hover:bg-green lg:inline-flex"
+                            rel="noreferrer"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="-1 0 24 15">
+                                    <title _mstTextHash="799825" _mstHash="264">Сердце</title>
+                                    <path fill="white" stroke="#26686E" stroke-width="2" fill-rule="evenodd"
+                                        d="M10.991 18c-.04 0-.497-.29-1.016-.643l-1.73-1.18c-.433-.297-1.12-.775-1.528-1.063a71.665 71.665 0 0 1-1.402-1.02c-.364-.274-.89-.688-1.168-.919a20.587 20.587 0 0 1-1.134-1.048 15.216 15.216 0 0 1-.94-1.024 14.42 14.42 0 0 1-.566-.781c-.14-.212-.37-.606-.51-.876-.141-.27-.344-.711-.45-.981a9.062 9.062 0 0 1-.29-.856 11.377 11.377 0 0 1-.166-.794A6.533 6.533 0 0 1 .02 5.703c0-.508.02-.787.074-1.076A6.77 6.77 0 0 1 .3 3.846c.074-.215.22-.555.326-.756.105-.202.292-.507.415-.68.124-.172.356-.447.517-.611.16-.164.45-.417.642-.562.193-.145.574-.377.846-.517C3.32.58 3.75.398 4 .314A7.1 7.1 0 0 1 4.885.09C5.18.04 5.515.02 5.975.02c.484 0 .77.02 1.053.073.214.04.548.123.74.184.194.061.515.191.716.289.2.098.524.287.72.42.195.134.522.41.727.615.243.243.467.519.65.8.155.237.313.473.354.525.073.095.073.095.236-.185a7.3 7.3 0 0 1 .39-.583 5.914 5.914 0 0 1 1.212-1.17c.16-.108.456-.28.656-.38.2-.101.543-.244.763-.318a7.16 7.16 0 0 1 .882-.216c.406-.07.583-.08 1.124-.062a5.72 5.72 0 0 1 1.125.123c.265.056.65.165.857.241.206.077.56.236.789.354.228.119.598.353.82.52.224.169.538.446.698.617.16.17.4.471.535.668.135.197.321.52.414.717.094.198.222.518.286.711.064.193.148.544.187.78.046.277.072.629.072.996 0 .419-.024.703-.091 1.089a9.55 9.55 0 0 1-.202.892 11.11 11.11 0 0 1-.274.778c-.09.225-.277.631-.414.904-.138.273-.397.716-.576.984-.178.269-.468.664-.645.879-.176.214-.55.619-.831.898-.281.279-.739.698-1.017.932-.279.233-.874.701-1.324 1.04-.45.338-1.194.878-1.655 1.2-.46.322-1.524 1.054-2.363 1.625-.84.572-1.558 1.04-1.598 1.04Z">
+                                    </path>
+                                </svg></span>
+                            <font _mstmutation="1" _msttexthash="75556" _msthidden="1" _msthash="265">Donate</font>
+                        </a>
+                    </div>
+                    <ul
+                        class="flex w-full flex-col overflow-auto ps-2 md:overflow-visible lg:flex-row lg:items-center lg:ps-0">
+                        <li class="mt-2 inline-flex md:mt-0"><a
+                                class="py-2 text-xl text-integrity hover:underline lg:py-0 lg:text-lg " href="./error.html"
+                                _msttexthash="983892" _msthash="266">Новости</a></li>
+                        <li class="relative flex w-full flex-col lg:inline-flex lg:w-auto lg:flex-row "><a
+                                id="menu-item-menu_link_content:3ed64d8a-3b63-4aa7-b403-1d64cc1bfa42"
+                                class="flex w-full items-center justify-between py-2 text-xl text-integrity hover:underline lg:px-4 lg:py-0 lg:text-lg  "
+                                href="./error.html"><span _msttexthash="3251027" _msthash="267">Понимание
+                                    диабета</span><button
+                                    class="inline-flex items-center justify-center rounded-md font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground text-lg h-12 py-4 px-4 submenu-toggler ml-2 transition-transform duration-300 lg:p-1 hover:lg:bg-transparent"
+                                    aria-controls="menu-item-menu_link_content:3ed64d8a-3b63-4aa7-b403-1d64cc1bfa42"
+                                    aria-expanded="true" aria-pressed="true"
+                                    aria-label="Закрыть пункт меню «Понимание диабета»" _mstaria-label="1091714"
+                                    _msthash="268"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-chevron-down">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg></button></a>
+                            <ul class="right-0 top-full rounded-lg bg-white px-4 py-2 lg:absolute lg:min-w-[250px] lg:shadow-lg 3xl:left-0 3xl:right-[unset] hidden"
+                                _mstvisible="0">
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="3989687"
+                                        _msthash="269" _mstvisible="2">Сахарный диабет 1 типа</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="3989960"
+                                        _msthash="270" _mstvisible="2">Сахарный диабет 2 типа</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="1610583" _msthash="271"
+                                        _mstvisible="2">Преддиабет</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="3921463"
+                                        _msthash="272" _mstvisible="2">Гестационный диабет</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="3915665"
+                                        _msthash="273" _mstvisible="2">Управление диабетом</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="6244108"
+                                        _msthash="274" _mstvisible="2">Технология лечения диабета</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="3913156"
+                                        _msthash="275" _mstvisible="2">Лекарства от диабета</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="7123337"
+                                        _msthash="276" _mstvisible="2">Осложнения сахарного диабета</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="4265807" _msthash="277"
+                                        _mstvisible="2">Исследования диабета</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative flex w-full flex-col lg:inline-flex lg:w-auto lg:flex-row "><a
+                                id="menu-item-menu_link_content:96e960b5-71fe-4986-807c-ce24c27d784d"
+                                class="flex w-full items-center justify-between py-2 text-xl text-integrity hover:underline lg:px-4 lg:py-0 lg:text-lg  "
+                                href="./error.html"><span _msttexthash="2960425"
+                                    _msthash="278">Оздоровительный</span><button
+                                    class="inline-flex items-center justify-center rounded-md font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground text-lg h-12 py-4 px-4 submenu-toggler ml-2 transition-transform duration-300 lg:p-1 hover:lg:bg-transparent"
+                                    aria-controls="menu-item-menu_link_content:96e960b5-71fe-4986-807c-ce24c27d784d"
+                                    aria-expanded="true" aria-pressed="true" aria-label="Закрыть пункт меню «Велнес»"
+                                    _mstaria-label="496795" _msthash="279"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-chevron-down">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg></button></a>
+                            <ul class="right-0 top-full rounded-lg bg-white px-4 py-2 lg:absolute lg:min-w-[250px] lg:shadow-lg 3xl:left-0 3xl:right-[unset] hidden"
+                                _mstvisible="0">
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="1613586" _msthash="280"
+                                        _mstvisible="2">Упражнение</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="4280666" _msthash="281"
+                                        _mstvisible="2">Психическое здоровье</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="2371122" _msthash="282"
+                                        _mstvisible="2">Диета и питание</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="1611740" _msthash="283"
+                                        _mstvisible="2">Образ жизни</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="987324" _msthash="284" _mstvisible="2">Рецепты</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2 inline-flex md:mt-0"><a
+                                class="py-2 text-xl text-integrity hover:underline lg:py-0 lg:text-lg " href="./error.html"
+                                _msttexthash="987324" _msthash="285">Рецепты</a></li>
+                        <li class="relative flex w-full flex-col lg:inline-flex lg:w-auto lg:flex-row "><a
+                                id="menu-item-menu_link_content:f217a88e-8a6d-49b6-a7c3-500d410397ed"
+                                class="flex w-full items-center justify-between py-2 text-xl text-integrity hover:underline lg:px-4 lg:py-0 lg:text-lg  "
+                                href="./error.html"><span _msttexthash="1593605" _msthash="286">О компании
+                                    diaTribe</span><button
+                                    class="inline-flex items-center justify-center rounded-md font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground text-lg h-12 py-4 px-4 submenu-toggler ml-2 transition-transform duration-300 lg:p-1 hover:lg:bg-transparent"
+                                    aria-controls="menu-item-menu_link_content:f217a88e-8a6d-49b6-a7c3-500d410397ed"
+                                    aria-expanded="true" aria-pressed="true" aria-label="Закрыть пункт меню О diaTribe"
+                                    _mstaria-label="689624" _msthash="287"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-chevron-down">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg></button></a>
+                            <ul class="right-0 top-full rounded-lg bg-white px-4 py-2 lg:absolute lg:min-w-[250px] lg:shadow-lg 3xl:left-0 3xl:right-[unset] hidden"
+                                _mstvisible="0">
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="4647695" _msthash="288"
+                                        _mstvisible="2">Способы пожертвования</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="1620658" _msthash="289"
+                                        _mstvisible="2">Наша миссия</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="2953444" _msthash="290"
+                                        _mstvisible="2">Совет директоров</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="633841" _msthash="291"
+                                        _mstvisible="2">Посох</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="988299" _msthash="292"
+                                        _mstvisible="2">События</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="1179269" _msthash="293"
+                                        _mstvisible="2">Программ</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="3924492" _msthash="294"
+                                        _mstvisible="2">Отчеты о воздействии</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="1393444" _msthash="295"
+                                        _mstvisible="2">Спонсоров</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="9593181" _msthash="296"
+                                        _mstvisible="2">Финансы и корпоративное управление</a></li>
+                                <li class="mt-2 flex md:mt-0" _mstvisible="1"><a
+                                        class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                                        href="./error.html" _msttexthash="2661958" _msthash="297"
+                                        _mstvisible="2">Свяжитесь с нами</a></li>
+                            </ul>
+                        </li>
+                    </ul><a href="./error.html" target="_blank"
+                        class="mt-4 flex w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-lg font-bold text-white duration-200 ease-in-out hover:bg-green lg:ms-4 lg:hidden"
+                        rel="noreferrer"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="-1 0 24 15">
+                                <title _mstTextHash="799825" _mstHash="298">Сердце</title>
+                                <path fill="white" stroke="#26686E" stroke-width="2" fill-rule="evenodd"
+                                    d="M10.991 18c-.04 0-.497-.29-1.016-.643l-1.73-1.18c-.433-.297-1.12-.775-1.528-1.063a71.665 71.665 0 0 1-1.402-1.02c-.364-.274-.89-.688-1.168-.919a20.587 20.587 0 0 1-1.134-1.048 15.216 15.216 0 0 1-.94-1.024 14.42 14.42 0 0 1-.566-.781c-.14-.212-.37-.606-.51-.876-.141-.27-.344-.711-.45-.981a9.062 9.062 0 0 1-.29-.856 11.377 11.377 0 0 1-.166-.794A6.533 6.533 0 0 1 .02 5.703c0-.508.02-.787.074-1.076A6.77 6.77 0 0 1 .3 3.846c.074-.215.22-.555.326-.756.105-.202.292-.507.415-.68.124-.172.356-.447.517-.611.16-.164.45-.417.642-.562.193-.145.574-.377.846-.517C3.32.58 3.75.398 4 .314A7.1 7.1 0 0 1 4.885.09C5.18.04 5.515.02 5.975.02c.484 0 .77.02 1.053.073.214.04.548.123.74.184.194.061.515.191.716.289.2.098.524.287.72.42.195.134.522.41.727.615.243.243.467.519.65.8.155.237.313.473.354.525.073.095.073.095.236-.185a7.3 7.3 0 0 1 .39-.583 5.914 5.914 0 0 1 1.212-1.17c.16-.108.456-.28.656-.38.2-.101.543-.244.763-.318a7.16 7.16 0 0 1 .882-.216c.406-.07.583-.08 1.124-.062a5.72 5.72 0 0 1 1.125.123c.265.056.65.165.857.241.206.077.56.236.789.354.228.119.598.353.82.52.224.169.538.446.698.617.16.17.4.471.535.668.135.197.321.52.414.717.094.198.222.518.286.711.064.193.148.544.187.78.046.277.072.629.072.996 0 .419-.024.703-.091 1.089a9.55 9.55 0 0 1-.202.892 11.11 11.11 0 0 1-.274.778c-.09.225-.277.631-.414.904-.138.273-.397.716-.576.984-.178.269-.468.664-.645.879-.176.214-.55.619-.831.898-.281.279-.739.698-1.017.932-.279.233-.874.701-1.324 1.04-.45.338-1.194.878-1.655 1.2-.46.322-1.524 1.054-2.363 1.625-.84.572-1.558 1.04-1.598 1.04Z">
+                                </path>
+                            </svg></span>
+                        <font _mstmutation="1" _msttexthash="801658" _msthash="299">Дарить</font>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="fixed left-0 top-0 z-40 flex h-screen w-full flex-col items-start bg-white px-5 pt-28 md:pt-32 lg:relative lg:block lg:size-auto lg:flex-row lg:px-0 lg:pt-0 block"
+        id="navbar-default">
+        <div class="mb-6 flex w-full items-center justify-end">
+            <form class="relative inline-flex w-full items-center lg:mx-4 lg:w-auto"><button
+                    class="inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:text-accent-foreground text-lg h-12 icon-magnifier--no-bg-color siez-10 absolute right-0 z-10 rounded-lg bg-center bg-no-repeat p-0 hover:bg-gray-light"
+                    type="submit" aria-label="Search" _msthidden="A" _mstaria-label="74607" _msthash="261"></button>
+            </form><a
+                href="./error.html"error.html" target="_blank"
+                class="ms-4 hidden rounded-md bg-primary px-5 py-1 text-lg font-bold text-white duration-200 ease-in-out hover:bg-green lg:inline-flex"
+                rel="noreferrer"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="-1 0 24 15">
+                        <title _mstTextHash="799825" _mstHash="264">Сердце</title>
+                        <path fill="white" stroke="#26686E" stroke-width="2" fill-rule="evenodd"
+                            d="M10.991 18c-.04 0-.497-.29-1.016-.643l-1.73-1.18c-.433-.297-1.12-.775-1.528-1.063a71.665 71.665 0 0 1-1.402-1.02c-.364-.274-.89-.688-1.168-.919a20.587 20.587 0 0 1-1.134-1.048 15.216 15.216 0 0 1-.94-1.024 14.42 14.42 0 0 1-.566-.781c-.14-.212-.37-.606-.51-.876-.141-.27-.344-.711-.45-.981a9.062 9.062 0 0 1-.29-.856 11.377 11.377 0 0 1-.166-.794A6.533 6.533 0 0 1 .02 5.703c0-.508.02-.787.074-1.076A6.77 6.77 0 0 1 .3 3.846c.074-.215.22-.555.326-.756.105-.202.292-.507.415-.68.124-.172.356-.447.517-.611.16-.164.45-.417.642-.562.193-.145.574-.377.846-.517C3.32.58 3.75.398 4 .314A7.1 7.1 0 0 1 4.885.09C5.18.04 5.515.02 5.975.02c.484 0 .77.02 1.053.073.214.04.548.123.74.184.194.061.515.191.716.289.2.098.524.287.72.42.195.134.522.41.727.615.243.243.467.519.65.8.155.237.313.473.354.525.073.095.073.095.236-.185a7.3 7.3 0 0 1 .39-.583 5.914 5.914 0 0 1 1.212-1.17c.16-.108.456-.28.656-.38.2-.101.543-.244.763-.318a7.16 7.16 0 0 1 .882-.216c.406-.07.583-.08 1.124-.062a5.72 5.72 0 0 1 1.125.123c.265.056.65.165.857.241.206.077.56.236.789.354.228.119.598.353.82.52.224.169.538.446.698.617.16.17.4.471.535.668.135.197.321.52.414.717.094.198.222.518.286.711.064.193.148.544.187.78.046.277.072.629.072.996 0 .419-.024.703-.091 1.089a9.55 9.55 0 0 1-.202.892 11.11 11.11 0 0 1-.274.778c-.09.225-.277.631-.414.904-.138.273-.397.716-.576.984-.178.269-.468.664-.645.879-.176.214-.55.619-.831.898-.281.279-.739.698-1.017.932-.279.233-.874.701-1.324 1.04-.45.338-1.194.878-1.655 1.2-.46.322-1.524 1.054-2.363 1.625-.84.572-1.558 1.04-1.598 1.04Z">
+                        </path>
+                    </svg></span>
+                <font _mstmutation="1" _msttexthash="75556" _msthidden="1" _msthash="265">Donate</font>
+            </a>
+        </div>
+        <ul class="flex w-full flex-col overflow-auto ps-2 md:overflow-visible lg:flex-row lg:items-center lg:ps-0">
+            <li class="mt-2 inline-flex md:mt-0"><a
+                    class="py-2 text-xl text-integrity hover:underline lg:py-0 lg:text-lg " href="./error.html"
+                    _msttexthash="983892" _msthash="266">Новости</a></li>
+            <li class="relative flex w-full flex-col lg:inline-flex lg:w-auto lg:flex-row "><a
+                    id="menu-item-menu_link_content:3ed64d8a-3b63-4aa7-b403-1d64cc1bfa42"
+                    class="flex w-full items-center justify-between py-2 text-xl text-integrity hover:underline lg:px-4 lg:py-0 lg:text-lg  "
+                    href="./error.html"><span _msttexthash="3251027" _msthash="267">Понимание
+                        диабета</span><button
+                        class="inline-flex items-center justify-center rounded-md font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground text-lg h-12 py-4 px-4 submenu-toggler ml-2 transition-transform duration-300 lg:p-1 hover:lg:bg-transparent"
+                        aria-controls="menu-item-menu_link_content:3ed64d8a-3b63-4aa7-b403-1d64cc1bfa42"
+                        aria-expanded="false" aria-pressed="false" aria-label="Открыть пункт меню «Понимание диабета»"
+                        _mstaria-label="1037504" _msthash="268"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></button></a>
+                <ul class="right-0 top-full rounded-lg bg-white px-4 py-2 lg:absolute lg:min-w-[250px] lg:shadow-lg 3xl:left-0 3xl:right-[unset] hidden"
+                    _msthidden="9">
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="217269" _msthidden="1"
+                            _msthash="269">Type 1 Diabetes</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="217412" _msthidden="1"
+                            _msthash="270">Type 2 Diabetes</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="178087" _msthidden="1"
+                            _msthash="271">Prediabetes</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="407186" _msthidden="1"
+                            _msthash="272">Gestational Diabetes</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="373360" _msthidden="1"
+                            _msthash="273">Diabetes Management</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="381147" _msthidden="1"
+                            _msthash="274">Diabetes Technology</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="410683" _msthidden="1"
+                            _msthash="275">Diabetes Medications</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="487994" _msthidden="1"
+                            _msthash="276">Diabetes Complications</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="308152" _msthidden="1" _msthash="277">Diabetes
+                            Research</a></li>
+                </ul>
+            </li>
+            <li class="relative flex w-full flex-col lg:inline-flex lg:w-auto lg:flex-row "><a
+                    id="menu-item-menu_link_content:96e960b5-71fe-4986-807c-ce24c27d784d"
+                    class="flex w-full items-center justify-between py-2 text-xl text-integrity hover:underline lg:px-4 lg:py-0 lg:text-lg  "
+                    href="./error.html"><span _msttexthash="2960425" _msthash="278">Оздоровительный</span><button
+                        class="inline-flex items-center justify-center rounded-md font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground text-lg h-12 py-4 px-4 submenu-toggler ml-2 transition-transform duration-300 lg:p-1 hover:lg:bg-transparent"
+                        aria-controls="menu-item-menu_link_content:96e960b5-71fe-4986-807c-ce24c27d784d"
+                        aria-expanded="false" aria-pressed="false" aria-label="Открыть пункт меню Wellness"
+                        _mstaria-label="459771" _msthash="279"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></button></a>
+                <ul class="right-0 top-full rounded-lg bg-white px-4 py-2 lg:absolute lg:min-w-[250px] lg:shadow-lg 3xl:left-0 3xl:right-[unset] hidden"
+                    _msthidden="5">
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="113750" _msthidden="1" _msthash="280">Exercise</a>
+                    </li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="198081" _msthidden="1" _msthash="281">Mental
+                            Health</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="320554" _msthidden="1" _msthash="282">Diet
+                            and Nutrition</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="137241" _msthidden="1" _msthash="283">Lifestyle</a>
+                    </li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="94406" _msthidden="1" _msthash="284">Recipes</a></li>
+                </ul>
+            </li>
+            <li class="relative flex w-full flex-col lg:inline-flex lg:w-auto lg:flex-row "><a
+                    id="menu-item-menu_link_content:f217a88e-8a6d-49b6-a7c3-500d410397ed"
+                    class="flex w-full items-center justify-between py-2 text-xl text-integrity hover:underline lg:px-4 lg:py-0 lg:text-lg  "
+                    href="./error.html"><span _msttexthash="1593605" _msthash="286">О компании diaTribe</span><button
+                        class="inline-flex items-center justify-center rounded-md font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground text-lg h-12 py-4 px-4 submenu-toggler ml-2 transition-transform duration-300 lg:p-1 hover:lg:bg-transparent"
+                        aria-controls="menu-item-menu_link_content:f217a88e-8a6d-49b6-a7c3-500d410397ed"
+                        aria-expanded="false" aria-pressed="false" aria-label="Открыть пункт меню «О diaTribe»"
+                        _mstaria-label="646542" _msthash="287"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></button></a>
+                <ul class="right-0 top-full rounded-lg bg-white px-4 py-2 lg:absolute lg:min-w-[250px] lg:shadow-lg 3xl:left-0 3xl:right-[unset] hidden"
+                    _msthidden="10">
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="" _msttexthash="203606" _msthidden="1" _msthash="288">Ways to
+                            Donate</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="" _msttexthash="158730" _msthidden="1" _msthash="289">Our
+                            Mission</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="316147" _msthidden="1" _msthash="290">Board
+                            of Directors</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="58812" _msthidden="1" _msthash="291">Staff</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="79196" _msthidden="1"
+                            _msthash="292">Events</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="116298" _msthidden="1" _msthash="293">Programs</a>
+                    </li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="233857" _msthidden="1" _msthash="294">Impact
+                            Reports</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="120445" _msthidden="1" _msthash="295">Sponsors</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="465426" _msthidden="1"
+                            _msthash="296">Financials &amp; Governance</a></li>
+                    <li class="mt-2 flex md:mt-0" _msthidden="1"><a
+                            class="w-full rounded-sm py-2 ps-4 text-xl text-black hover:bg-green-lightest hover:no-underline lg:ps-0 lg:text-center lg:text-base "
+                            href="./error.html" _msttexthash="132405" _msthidden="1" _msthash="297">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul><a href="./error.html" target="_blank"
+            class="mt-4 flex w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-lg font-bold text-white duration-200 ease-in-out hover:bg-green lg:ms-4 lg:hidden bg-[#26686E] hover:bg-[#65b1a0]"
+            rel="noreferrer"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="-1 0 24 15">
+                    <title _mstTextHash="799825" _mstHash="298">Сердце</title>
+                    <path fill="white" stroke="#26686E" stroke-width="2" fill-rule="evenodd"
+                        d="M10.991 18c-.04 0-.497-.29-1.016-.643l-1.73-1.18c-.433-.297-1.12-.775-1.528-1.063a71.665 71.665 0 0 1-1.402-1.02c-.364-.274-.89-.688-1.168-.919a20.587 20.587 0 0 1-1.134-1.048 15.216 15.216 0 0 1-.94-1.024 14.42 14.42 0 0 1-.566-.781c-.14-.212-.37-.606-.51-.876-.141-.27-.344-.711-.45-.981a9.062 9.062 0 0 1-.29-.856 11.377 11.377 0 0 1-.166-.794A6.533 6.533 0 0 1 .02 5.703c0-.508.02-.787.074-1.076A6.77 6.77 0 0 1 .3 3.846c.074-.215.22-.555.326-.756.105-.202.292-.507.415-.68.124-.172.356-.447.517-.611.16-.164.45-.417.642-.562.193-.145.574-.377.846-.517C3.32.58 3.75.398 4 .314A7.1 7.1 0 0 1 4.885.09C5.18.04 5.515.02 5.975.02c.484 0 .77.02 1.053.073.214.04.548.123.74.184.194.061.515.191.716.289.2.098.524.287.72.42.195.134.522.41.727.615.243.243.467.519.65.8.155.237.313.473.354.525.073.095.073.095.236-.185a7.3 7.3 0 0 1 .39-.583 5.914 5.914 0 0 1 1.212-1.17c.16-.108.456-.28.656-.38.2-.101.543-.244.763-.318a7.16 7.16 0 0 1 .882-.216c.406-.07.583-.08 1.124-.062a5.72 5.72 0 0 1 1.125.123c.265.056.65.165.857.241.206.077.56.236.789.354.228.119.598.353.82.52.224.169.538.446.698.617.16.17.4.471.535.668.135.197.321.52.414.717.094.198.222.518.286.711.064.193.148.544.187.78.046.277.072.629.072.996 0 .419-.024.703-.091 1.089a9.55 9.55 0 0 1-.202.892 11.11 11.11 0 0 1-.274.778c-.09.225-.277.631-.414.904-.138.273-.397.716-.576.984-.178.269-.468.664-.645.879-.176.214-.55.619-.831.898-.281.279-.739.698-1.017.932-.279.233-.874.701-1.324 1.04-.45.338-1.194.878-1.655 1.2-.46.322-1.524 1.054-2.363 1.625-.84.572-1.558 1.04-1.598 1.04Z">
+                    </path>
+                </svg></span>
+            <font _mstmutation="1" _msttexthash="801658" _msthash="299">Дарить</font>
+        </a>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
+<!-- bg-[#FAFAFA]  -->

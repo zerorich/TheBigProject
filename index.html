@@ -15,27 +15,32 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
     </style>
 </head>
 
 <body>
     <header class="flex flex-col px-[13.4%] max-[1314px]:px-[9%] max-[1119px]:px-[2%]">
         <nav class="flex items-center h-[176px] justify-between">
-            <button data-collapse-toggle="navbar-default" type="button"
-                class="z-50  flex-col items-center rounded-lg py-4 hover:bg-white hidden max-[768px]:inline-flex"
-                aria-controls="navbar-default" aria-expanded="false" aria-pressed="false" aria-label="Открыть навигацию"
-                _mstaria-label="256776" _msthash="2204"><span class="sr-only" _msttexthash="3931915"
-                    _msthash="2205">Открыть главное меню</span><span
-                    class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 "></span><span
-                    class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 "></span><span
-                    class="ease-[cubic-bezier(0.25, 0.75, 1)] relative block h-[2px] w-[30px] bg-black duration-300 "></span></button>
+            
+            <button id="menu-button" data-collapse-toggle="navbar-default" type="button"
+                class="z-50 flex-col items-center rounded-lg py-4 hover:bg-white hidden max-[768px]:inline-flex"
+                aria-controls="navbar-default" aria-expanded="false" aria-pressed="false"
+                aria-label="Открыть навигацию">
+                <span class="sr-only">Открыть главное меню</span>
+                <span
+                    class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300"></span>
+                <span
+                    class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300"></span>
+                <span
+                    class="ease-[cubic-bezier(0.25, 0.75, 1)] relative block h-[2px] w-[30px] bg-black duration-300"></span>
+            </button>
             <a href="index.html"><img src="./assets/icons/logo.jpg" alt="" class="w-[150px] h-[150px]"></a>
             <div class="flex flex-col items-end gap-[18px]">
                 <div class="flex gap-2">
@@ -171,7 +176,8 @@
         <div
             class=" w-full bg-[#FAFAFA] h-[157.59px] px-[8.066%] flex items-center justify-between max-[1319px]:px-[2%] max-[1319px]:pr-[4%] max-[950px]:px-0 max-[950px]:pr-[5%] max-[768px]:flex-col max-[768px]:h-[616px] max-[768px]:bg-white max-[768px]:w-full max-[768px]:px-0 max-[768px]:py-5">
 
-            <p class="text-[#142D3F] text-[24px] font-[roboto] font-semibold w-[367px] text-center max-[400px]:w-full">Учитесь, живите
+            <p class="text-[#142D3F] text-[24px] font-[roboto] font-semibold w-[367px] text-center max-[400px]:w-full">
+                Учитесь, живите
                 и процветайте. <br><span class="text-[16px] font-medium">В чем ваш интерес?</span></p>
             <a href="./error.html"
                 class="font-[roboto] text-[18px] font-medium w-[85.98px] hover:text-[#24636a] duration-200 text-center max-[768px]:w-full max-[768px]:h-[80px] max-[768px]:bg-[#fafafa] max-[768px]:flex max-[768px]:justify-start max-[768px]:items-center max-[768px]:px-5 max-[768px]:font-[700]">Впервые
@@ -199,8 +205,8 @@
                     все новости</a>
             </div>
             <div class="relative h-[800px] flex items-center">
-                <div class="flex justify-between mt-4 overflow-hidden relative items-center">
-                    <div class="flex gap-6 transition-transform duration-500" id="carousel-container">
+                <div class="flex justify-between mt-4 overflow-hidden relative items-center max-[425px]:mt-[-280px]">
+                    <div class="flex gap-6 transition-transform duration-500 " id="carousel-container">
                         <a href="./error.html" class="group cursor-pointer min-w-[319px] mt-5">
                             <img class="w-[318px] rounded-xl group-hover:scale-[1.05] duration-500 max-[475px]:hidden"
                                 src="https://scontent.ftas1-1.fna.fbcdn.net/v/t39.30808-6/431531949_803963918443215_317823266215538969_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1Qb7eacPQPoQ7kNvgHZ2G2z&_nc_zt=23&_nc_ht=scontent.ftas1-1.fna&_nc_gid=AGbGEH2GypkPBx8jEgX_Nxy&oh=00_AYAWwNnooLURHAMFCP6EXZvb1k6K4C1aYGEYhLOAkDzh5w&oe=6791C256"
@@ -291,14 +297,22 @@
                     </svg>
                 </button>
             </div>
+            <a href="./error.html"
+                    class="underline font-[roboto] text-[18px] text-[#142C3E] hover:text-[#24636a] duration-200 hidden text-center mt-[-120px] max-[475px]:block">Смотреть
+                    все новости</a>
         </section>
         <section class="bg-white py-[5.954%]">
-            <div class="flex px-[14%] justify-between max-[1314px]:px-[9%] max-[1119px]:px-[2%] max-[768px]:flex-col max-[768px]:gap-4">
-                <div
-                    class="flex flex-col justify-between bg-[#FDF9F2] w-[30%] h-[391px] rounded-md pb-4 px-6 max-[768px]:w-full max-[768px]:h-[56.2px] max-[768px]:px-[16px] max-[768px]:py-[8px]">
-                    <div class="flex flex-col items-center pt-[96px] gap-2 max-[768px]:flex-row max-[768px]:p-0 max-[768px]:gap-0">
-                        <img class="w-[87px] h-[106px] max-[768px]:w-[33px] max-[768px]:h-[40px]" src="./assets/icons/card1.svg" alt="">
-                        <p class="font-[roboto] text-[32px] font-[700] text-center max-[768px]:text-[24px] max-[768px]:font-[400] max-[768px]:ml-2">Факторы риска и вы</p>
+            <div
+                class="flex px-[14%] justify-between max-[1314px]:px-[9%] max-[1119px]:px-[2%] max-[768px]:flex-col max-[768px]:gap-4">
+                <div onclick="location.href='./error.html'" 
+                    class="cursor-pointer flex flex-col justify-between bg-[#FDF9F2] w-[30%] h-[391px] rounded-md pb-4 px-6 max-[768px]:w-full max-[768px]:h-[56.2px] max-[768px]:px-[16px] max-[768px]:py-[8px]">
+                    <div 
+                        class="flex flex-col items-center pt-[96px] gap-2 max-[768px]:flex-row max-[768px]:p-0 max-[768px]:gap-0">
+                        <img class="w-[87px] h-[106px] max-[768px]:w-[33px] max-[768px]:h-[40px]"
+                            src="./assets/icons/card1.svg" alt="">
+                        <p
+                            class="font-[roboto] text-[32px] font-[700] text-center max-[768px]:text-[24px] max-[768px]:font-[400] max-[768px]:ml-2">
+                            Факторы риска и вы</p>
                     </div>
                     <a href="./error.html"
                         class=" font-[roboto] text-[18px] font-[600] flex items-center text-[#142C3E] hover:text-[#24636a] ml-auto max-[768px]:hidden">
@@ -309,10 +323,15 @@
                         </svg>
                     </a>
                 </div>
-                <div class="flex flex-col justify-between bg-[#FDF9F2] w-[30%] h-[391px] rounded-md pb-4 px-6 max-[768px]:w-full max-[768px]:h-[56.2px] max-[768px]:px-[16px] max-[768px]:py-[8px]">
-                    <div class="flex flex-col items-center pt-[96px] gap-2 max-[768px]:flex-row max-[768px]:p-0  max-[768px]:gap-0">
-                        <img class="w-[87px] h-[106px] max-[768px]:w-[33px] max-[768px]:h-[40px]" src="./assets/icons/card2.svg" alt="">
-                        <p class="font-[roboto] text-[32px] font-[700] text-center max-[768px]:text-[24px] max-[768px]:font-[400]  max-[768px]:ml-2">Управление Диабетом</p>
+                <div onclick="location.href='./error.html'"
+                    class="cursor-pointer flex flex-col justify-between bg-[#FDF9F2] w-[30%] h-[391px] rounded-md pb-4 px-6 max-[768px]:w-full max-[768px]:h-[56.2px] max-[768px]:px-[16px] max-[768px]:py-[8px]">
+                    <div
+                        class="flex flex-col items-center pt-[96px] gap-2 max-[768px]:flex-row max-[768px]:p-0  max-[768px]:gap-0">
+                        <img class="w-[87px] h-[106px] max-[768px]:w-[33px] max-[768px]:h-[40px]"
+                            src="./assets/icons/card2.svg" alt="">
+                        <p
+                            class="font-[roboto] text-[32px] font-[700] text-center max-[768px]:text-[24px] max-[768px]:font-[400]  max-[768px]:ml-2">
+                            Управление Диабетом</p>
                     </div>
                     <a href="./error.html"
                         class=" font-[roboto] text-[18px] font-[600] flex items-center text-[#142C3E] hover:text-[#24636a] ml-auto max-[768px]:hidden">
@@ -323,10 +342,15 @@
                         </svg>
                     </a>
                 </div>
-                <div class="flex flex-col justify-between bg-[#FDF9F2] w-[30%] h-[391px] rounded-md pb-4 px-6 max-[768px]:w-full max-[768px]:h-[56.2px] max-[768px]:px-[16px] max-[768px]:py-[8px]">
-                    <div class="flex flex-col items-center pt-[96px] gap-2 max-[768px]:flex-row max-[768px]:p-0 max-[768px]:gap-0">
-                        <img class="w-[87px] h-[106px] max-[768px]:w-[33px] max-[768px]:h-[40px]" src="./assets/icons/card3.svg" alt="">
-                        <p class="font-[roboto] text-[32px] font-[700] text-center max-[768px]:text-[24px] max-[768px]:font-[400] max-[768px]:ml-2">Осложнения</p>
+                <div onclick="location.href='./error.html'"
+                    class="cursor-pointer flex flex-col justify-between bg-[#FDF9F2] w-[30%] h-[391px] rounded-md pb-4 px-6 max-[768px]:w-full max-[768px]:h-[56.2px] max-[768px]:px-[16px] max-[768px]:py-[8px]">
+                    <div
+                        class="flex flex-col items-center pt-[96px] gap-2 max-[768px]:flex-row max-[768px]:p-0 max-[768px]:gap-0">
+                        <img class="w-[87px] h-[106px] max-[768px]:w-[33px] max-[768px]:h-[40px]"
+                            src="./assets/icons/card3.svg" alt="">
+                        <p
+                            class="font-[roboto] text-[32px] font-[700] text-center max-[768px]:text-[24px] max-[768px]:font-[400] max-[768px]:ml-2">
+                            Осложнения</p>
                     </div>
                     <a href="./error.html"
                         class=" font-[roboto] text-[18px] font-[600] flex items-center text-[#142C3E] hover:text-[#24636a] ml-auto max-[768px]:hidden">
@@ -336,6 +360,126 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg-gray-100 p-6">
+                <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
+                    <h1 class="text-2xl font-bold mb-6">Тест</h1>
+                    <form id="testForm" class="space-y-4">
+                        <!-- Question 1 -->
+                        <div class="question">
+                            <p class="font-medium">1. Ваш возраст?</p>
+                            <label class="block">
+                                <input type="radio" name="q1" value="0" class="mr-2"> Меньше 40 лет
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q1" value="2" class="mr-2"> 40-49 лет
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q1" value="3" class="mr-2"> 50-59 лет
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q1" value="4" class="mr-2"> Больше 60 лет
+                            </label>
+                        </div>
+        
+                        <!-- Question 2 -->
+                        <div class="question">
+                            <p class="font-medium">2. Ваш вес?</p>
+                            <label class="block">
+                                <input type="radio" name="q2" value="0" class="mr-2"> Меньше 65 кг
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q2" value="2" class="mr-2"> До 100 кг
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q2" value="3" class="mr-2"> Более 100 кг
+                            </label>
+                        </div>
+        
+                        <!-- Question 3 -->
+                        <div class="question">
+                            <p class="font-medium">3. У вас были случаи инфаркта или инсульта?</p>
+                            <label class="block">
+                                <input type="radio" name="q3" value="0" class="mr-2"> Нет
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q3" value="3" class="mr-2"> Да
+                            </label>
+                        </div>
+        
+                        <!-- Question 4 -->
+                        <div class="question">
+                            <p class="font-medium">4. Вы ежедневно занимаетесь физическими упражнениями?</p>
+                            <label class="block">
+                                <input type="radio" name="q4" value="3" class="mr-2"> Нет
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q4" value="0" class="mr-2"> Да
+                            </label>
+                        </div>
+        
+                        <!-- Question 5 -->
+                        <div class="question">
+                            <p class="font-medium">5. Есть ли у вас ребёнок с весом при рождении более 4 кг?</p>
+                            <label class="block">
+                                <input type="radio" name="q5" value="0" class="mr-2"> Нет
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q5" value="3" class="mr-2"> Да
+                            </label>
+                        </div>
+        
+                        <!-- Question 6 -->
+                        <div class="question">
+                            <p class="font-medium">6. Были ли у вас случаи высокого уровня сахара в крови?</p>
+                            <label class="block">
+                                <input type="radio" name="q6" value="0" class="mr-2"> Нет
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q6" value="5" class="mr-2"> Да
+                            </label>
+                        </div>
+        
+                        <!-- Question 7 -->
+                        <div class="question">
+                            <p class="font-medium">7. Ваше артериальное давление?</p>
+                            <label class="block">
+                                <input type="radio" name="q7" value="0" class="mr-2"> Ниже 130/80 мм рт. ст.
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q7" value="3" class="mr-2"> Выше 130/80 мм рт. ст.
+                            </label>
+                        </div>
+        
+                        <!-- Question 8 -->
+                        <div class="question">
+                            <p class="font-medium">8. Есть ли среди ваших родственников больные сахарным диабетом?</p>
+                            <label class="block">
+                                <input type="radio" name="q8" value="0" class="mr-2"> Нет
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q8" value="2" class="mr-2"> Да, но дальние родственники
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="q8" value="5" class="mr-2"> Да, близкие родственники
+                            </label>
+                        </div>
+        
+                        <button type="button" id="submitButton"
+                            class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                            disabled>
+                            Рассчитать
+                        </button>
+                    </form>
+        
+                    <div id="result" class="mt-6 hidden">
+                        <h2 class="text-xl font-bold">Ваш общий результат:</h2>
+                        <p id="score" class="text-lg mt-2"></p>
+                        <p id="advice" class="text-lg mt-4 font-medium"></p>
+                    </div>
                 </div>
             </div>
         </section>
