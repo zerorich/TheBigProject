@@ -16,9 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const screenWidth = window.innerWidth;
         if (screenWidth >= 1920) {
             maxPosition = 500;
-        } else if (screenWidth >= 1440) {
-            maxPosition = 1020;
-        } else if (screenWidth >= 768) {
+        } else if (screenWidth <= 1920 && screenWidth > 1440) {
+            maxPosition = 680;
+        } else if (screenWidth == 1440) {
+            maxPosition = 1000;
+        } else if (screenWidth <= 1024 && screenWidth > 768) {
+            maxPosition = 1310;
+        }
+        else if (screenWidth >= 768) {
             maxPosition = 1500;
         } else {
             maxPosition = 1700; // Если меньше 768, значение maxPosition не меняется
@@ -147,7 +152,6 @@ submitButton.addEventListener('click', function () {
     for (let [key, value] of formData.entries()) {
         score += parseInt(value, 10);
     }
-
     // Display score and advice
     document.getElementById('score').textContent = `Общий балл: ${score}`;
     const adviceElement = document.getElementById('advice');
@@ -165,4 +169,82 @@ submitButton.addEventListener('click', function () {
     }
 
     document.getElementById('result').classList.remove('hidden');
+});
+document.getElementById("menu-button").onclick = function() {
+    document.getElementById("body").style.overflow = "hidden"
+    document.getElementById("menu-425").classList.remove('hidden')
+    document.getElementById("menu-425").classList.add('absolute', 'z-[99]', 'h-screen', "top-0")
+}
+document.getElementById("menu-default").onclick = function() {
+    // Убираем классы, которые делают меню видимым
+    document.getElementById("menu-425").classList.remove('absolute', 'z-[99]', 'h-screen', "top-0");
+    // Добавляем класс 'hidden', чтобы скрыть меню
+    document.getElementById("menu-425").classList.add('hidden');
+    
+    // Если нужно, можно также восстановить overflow для body
+    document.getElementById("body").style.overflow = "auto"; // Показываем прокрутку
+}
+document.getElementById("menu-img").addEventListener("click", function () {
+    const dropdown = document.getElementById("drop");
+
+    // Переключение классов для видимости
+    if (dropdown.classList.contains("opacity-0")) {
+        dropdown.classList.remove("opacity-0", "invisible");
+        dropdown.classList.add("opacity-100", "visible");
+    } else {
+        dropdown.classList.add("opacity-0", "invisible");
+        dropdown.classList.remove("opacity-100", "visible");
+    }
+});
+document.addEventListener("click", function (e) {
+    const dropdown = document.getElementById("drop");
+    const button = document.getElementById("menu-img");
+
+    // Проверяем, кликнули ли мы вне кнопки или выпадающего списка
+    if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+        dropdown.classList.add("opacity-0", "invisible");
+        dropdown.classList.remove("opacity-100", "visible");
+    }
+});
+const menuButton = document.getElementById("menu-img");
+const menuIcon = menuButton.querySelector("img");
+
+menuButton.addEventListener("click", () => {
+    menuIcon.classList.toggle("rotate-180");
+});
+document.querySelectorAll(".menu-toggle").forEach((button) => {
+    const menuIcon = button.querySelector(".menu-icon");
+
+    button.addEventListener("click", function () {
+        const dropdown = button.closest(".menu-item").querySelector(".dropdown-menu");
+
+        // Переключение видимости меню
+        if (dropdown.classList.contains("opacity-0")) {
+            dropdown.classList.remove("opacity-0", "invisible");
+            dropdown.classList.add("opacity-100", "visible");
+        } else {
+            dropdown.classList.add("opacity-0", "invisible");
+            dropdown.classList.remove("opacity-100", "visible");
+        }
+
+        // Анимация иконки
+        menuIcon.classList.toggle("rotate-180");
+    });
+});
+
+// Закрытие всех меню при клике вне
+document.addEventListener("click", function (e) {
+    document.querySelectorAll(".dropdown-menu").forEach((dropdown) => {
+        const menuItem = dropdown.closest(".menu-item");
+        const toggleButton = menuItem.querySelector(".menu-toggle");
+
+        if (!dropdown.contains(e.target) && !toggleButton.contains(e.target)) {
+            dropdown.classList.add("opacity-0", "invisible");
+            dropdown.classList.remove("opacity-100", "visible");
+
+            // Убираем вращение иконки
+            const menuIcon = toggleButton.querySelector(".menu-icon");
+            menuIcon.classList.remove("rotate-180");
+        }
+    });
 });

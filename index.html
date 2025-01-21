@@ -25,10 +25,10 @@
     </style>
 </head>
 
-<body>
+<body id="body">
     <header class="flex flex-col px-[13.4%] max-[1314px]:px-[9%] max-[1119px]:px-[2%]">
         <nav class="flex items-center h-[176px] justify-between">
-            
+
             <button id="menu-button" data-collapse-toggle="navbar-default" type="button"
                 class="z-50 flex-col items-center rounded-lg py-4 hover:bg-white hidden max-[768px]:inline-flex"
                 aria-controls="navbar-default" aria-expanded="false" aria-pressed="false"
@@ -42,7 +42,7 @@
                     class="ease-[cubic-bezier(0.25, 0.75, 1)] relative block h-[2px] w-[30px] bg-black duration-300"></span>
             </button>
             <a href="index.html"><img src="./assets/icons/logo.jpg" alt="" class="w-[150px] h-[150px]"></a>
-            <div class="flex flex-col items-end gap-[18px]">
+            <div class="flex flex-col items-end gap-[18px] top-0 left-0 right-0 bottom-0">
                 <div class="flex gap-2">
                     <a href="error.html"
                         class="font-[roboto] text-[18px] text-[#142C3E] px-5 py-2 border-[1px] border-black rounded-xl font-bold hover:bg-black hover:text-white max-[768px]:border-[0px] max-[768px]:px-0">Подписаться</a>
@@ -50,7 +50,7 @@
                         class="font-[roboto] text-[18px] text-white px-5 py-2 bg-[#26686E] pr-8 rounded-xl font-bold flex gap-2 hover:bg-[#65b1a0] duration-200 max-[768px]:hidden"><img
                             src="./assets/icons/Vector.svg" alt="">Пожертвовать</a>
                 </div>
-                <div class="flex gap-5 justify-end max-[768px]:hidden">
+                <div id="menu" class="flex gap-5 justify-end max-[768px]:hidden">
                     <a href="./error.html"
                         class="font-[roboto] text-[#224055] text-[18px] h-[26px] border-transparent border-b-[1px] hover:border-[#224055] transition-colors">Новости</a>
                     <div class="relative group">
@@ -298,15 +298,15 @@
                 </button>
             </div>
             <a href="./error.html"
-                    class="underline font-[roboto] text-[18px] text-[#142C3E] hover:text-[#24636a] duration-200 hidden text-center mt-[-120px] max-[475px]:block">Смотреть
-                    все новости</a>
+                class="underline font-[roboto] text-[18px] text-[#142C3E] hover:text-[#24636a] duration-200 hidden text-center mt-[-120px] max-[475px]:block">Смотреть
+                все новости</a>
         </section>
         <section class="bg-white py-[5.954%]">
             <div
                 class="flex px-[14%] justify-between max-[1314px]:px-[9%] max-[1119px]:px-[2%] max-[768px]:flex-col max-[768px]:gap-4">
-                <div onclick="location.href='./error.html'" 
+                <div onclick="location.href='./error.html'"
                     class="cursor-pointer flex flex-col justify-between bg-[#FDF9F2] w-[30%] h-[391px] rounded-md pb-4 px-6 max-[768px]:w-full max-[768px]:h-[56.2px] max-[768px]:px-[16px] max-[768px]:py-[8px]">
-                    <div 
+                    <div
                         class="flex flex-col items-center pt-[96px] gap-2 max-[768px]:flex-row max-[768px]:p-0 max-[768px]:gap-0">
                         <img class="w-[87px] h-[106px] max-[768px]:w-[33px] max-[768px]:h-[40px]"
                             src="./assets/icons/card1.svg" alt="">
@@ -384,7 +384,7 @@
                                 <input type="radio" name="q1" value="4" class="mr-2"> Больше 60 лет
                             </label>
                         </div>
-        
+
                         <!-- Question 2 -->
                         <div class="question">
                             <p class="font-medium">2. Ваш вес?</p>
@@ -398,7 +398,7 @@
                                 <input type="radio" name="q2" value="3" class="mr-2"> Более 100 кг
                             </label>
                         </div>
-        
+
                         <!-- Question 3 -->
                         <div class="question">
                             <p class="font-medium">3. У вас были случаи инфаркта или инсульта?</p>
@@ -409,7 +409,7 @@
                                 <input type="radio" name="q3" value="3" class="mr-2"> Да
                             </label>
                         </div>
-        
+
                         <!-- Question 4 -->
                         <div class="question">
                             <p class="font-medium">4. Вы ежедневно занимаетесь физическими упражнениями?</p>
@@ -420,7 +420,7 @@
                                 <input type="radio" name="q4" value="0" class="mr-2"> Да
                             </label>
                         </div>
-        
+
                         <!-- Question 5 -->
                         <div class="question">
                             <p class="font-medium">5. Есть ли у вас ребёнок с весом при рождении более 4 кг?</p>
@@ -431,7 +431,7 @@
                                 <input type="radio" name="q5" value="3" class="mr-2"> Да
                             </label>
                         </div>
-        
+
                         <!-- Question 6 -->
                         <div class="question">
                             <p class="font-medium">6. Были ли у вас случаи высокого уровня сахара в крови?</p>
@@ -442,7 +442,7 @@
                                 <input type="radio" name="q6" value="5" class="mr-2"> Да
                             </label>
                         </div>
-        
+
                         <!-- Question 7 -->
                         <div class="question">
                             <p class="font-medium">7. Ваше артериальное давление?</p>
@@ -453,7 +453,7 @@
                                 <input type="radio" name="q7" value="3" class="mr-2"> Выше 130/80 мм рт. ст.
                             </label>
                         </div>
-        
+
                         <!-- Question 8 -->
                         <div class="question">
                             <p class="font-medium">8. Есть ли среди ваших родственников больные сахарным диабетом?</p>
@@ -467,14 +467,14 @@
                                 <input type="radio" name="q8" value="5" class="mr-2"> Да, близкие родственники
                             </label>
                         </div>
-        
+
                         <button type="button" id="submitButton"
                             class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed"
                             disabled>
                             Рассчитать
                         </button>
                     </form>
-        
+
                     <div id="result" class="mt-6 hidden">
                         <h2 class="text-xl font-bold">Ваш общий результат:</h2>
                         <p id="score" class="text-lg mt-2"></p>
@@ -484,6 +484,147 @@
             </div>
         </section>
     </main>
+    <div class="hidden bg-white w-full h-screen" id="menu-425">
+        <nav class="flex flex-col gap-2 px-[13.4%] max-[1314px]:px-[9%] max-[1119px]:px-[2%]">
+            <div class="flex items-center h-[176px] justify-between ">
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="z-50 inline-flex flex-col items-center rounded-lg py-4 hover:bg-white lg:hidden"
+                    aria-controls="navbar-default" aria-expanded="true" aria-pressed="true" id="menu-default"
+                    aria-label="Close Navigation"><span class="sr-only">Open main menu</span><span
+                        class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 top-[6px] rotate-45"></span><span
+                        class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 opacity-0"></span><span
+                        class="ease-[cubic-bezier(0.25, 0.75, 1)] relative block h-[2px] w-[30px] bg-black duration-300 top-[-6px] -rotate-45"></span></button>
+                <a href="index.html"><img src="./assets/icons/logo.jpg" alt="" class="w-[150px] h-[150px]"></a>
+                <a href="error.html"
+                    class="font-[roboto] text-[18px] text-[#142C3E] px-5 py-2 border-[1px] border-black rounded-xl font-bold hover:bg-black hover:text-white max-[768px]:border-[0px] max-[768px]:px-0">Подписаться</a>
+            </div>
+
+
+            <div class="flex flex-col items-end gap-[18px] top-0 left-0 right-0 bottom-0 px-[3%]">
+                <div class="flex gap-10 justify-end w-[100%]">
+                    <div class="flex flex-col w-[100%] gap-8">
+                        <a href="./error.html"
+                            class="flex items-center justify-between font-[roboto] gap-2 w-full text-[#224055] text-[20px] font-[500] transition-colors hover:bg-gray-100">
+                            Новости
+                        </a>
+                        <div class="relative group w-[100%]">
+                            <div class="flex items-center justify-between gap-2 w-[100%]  ">
+                                <a href="./error.html"
+                                    class=" font-[roboto] text-[#224055] text-[20px] w-[100%] h-[26px] font-[500] border-b-1 border-transparent transition-colors group-hover:border-[#224055]">
+                                    Понимание Диабетa</a>
+                                <button id="menu-img">
+                                    <img class="w-[15px] h-2 transition-transform duration-300 "
+                                        src="./assets/icons/Vector.png" alt="">
+                                </button>
+                            </div>
+
+                            <div id="drop"
+                                class="absolute opacity-0 invisible group-hover:opacity-100 transition-all duration-300 top-full right-0 mt-2 w-[100%] bg-white shadow-lg rounded-xl z-50">
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Сахарный
+                                    Диабета 1 типа</a>
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Сахарный
+                                    Диабета 2 типа</a>
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Преддиабет</a>
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Гестационный
+                                    Диабет</a>
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Управление
+                                    Диабетом</a>
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Технология
+                                    Лечения Диабета</a>
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Осложнения
+                                    Сахарного Диабета</a>
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Лекарства
+                                    От Диабета</a>
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Осложнения
+                                    Сахарного Диабета</a>
+                                <a href="./error.html"
+                                    class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Исследования
+                                    Диабета</a>
+                            </div>
+                        </div>
+                        <div class="menu-item flex flex-col w-[100%] gap-5">
+                            <div class="relative group w-[100%]">
+                                <div class="flex items-center justify-between gap-2 w-[100%]">
+                                    <a href="./error.html"
+                                        class="font-[roboto] text-[#224055] text-[20px] w-[100%] h-[26px] font-[500] border-b-1 border-transparent transition-colors hover:border-[#224055]">
+                                        Оздоровительный
+                                    </a>
+                                    <button class="menu-toggle">
+                                        <img class="menu-icon w-[15px] h-2 transition-transform duration-300"
+                                            src="./assets/icons/Vector.png" alt="">
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="dropdown-menu absolute opacity-0 invisible transition-all duration-300 top-full right-0 mt-2 w-[100%] bg-white shadow-lg rounded-xl z-50">
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Упражнения</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Психологическое
+                                        Здоровье</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Диета и
+                                        Питание</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Образ
+                                        жизни</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Рецепты</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item flex flex-col w-[100%] gap-5">
+                            <div class="relative group w-[100%]">
+                                <div class="flex items-center justify-between gap-2 w-[100%]">
+                                    <a href="./error.html"
+                                        class="font-[roboto] text-[#224055] text-[20px] w-[100%] h-[26px] font-[500] border-b-1 border-transparent transition-colors hover:border-[#224055]">
+                                        О БООИИБСД "УМИД"
+                                    </a>
+                                    <button class="menu-toggle">
+                                        <img class="menu-icon w-[15px] h-2 transition-transform duration-300"
+                                            src="./assets/icons/Vector.png" alt="">
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="dropdown-menu absolute opacity-0 invisible transition-all duration-300 top-full right-0 mt-2 w-[100%] bg-white shadow-lg rounded-xl z-50">
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Способы
+                                        Пожертвования</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Члены
+                                        Правления</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">События</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Программа</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Отчеты о
+                                        Воздействии</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Спонсоры</a>
+                                    <a href="./error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Свяжитесь с нами</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./error.html" class="font-[roboto] text-[18px] text-white px-5 py-2 bg-[#26686E] pr-8 rounded-xl h-[52px] items-center justify-center font-bold flex gap-2 hover:bg-[#65b1a0] duration-200"><img src="./assets/icons/Vector.svg" alt="">Пожертвовать</a>
+                    
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </div>
     <script src="./main.js"></script>
 </body>
 
