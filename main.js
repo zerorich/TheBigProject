@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPosition = 0;
     const cardWidth = 340; // Ширина карточки
 
-    let maxPosition = 1700; // Изначальное значение maxPosition
+    let maxPosition = 1000; // Изначальное значение maxPosition
 
     let containerWidth = container.parentElement.offsetWidth;
     let visibleCards = Math.floor(containerWidth / cardWidth);
@@ -15,19 +15,80 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateMaxPosition() {
         const screenWidth = window.innerWidth;
         if (screenWidth >= 1920) {
-            maxPosition = 500;
+            maxPosition = 0;
         } else if (screenWidth <= 1920 && screenWidth > 1440) {
-            maxPosition = 680;
-        } else if (screenWidth == 1440) {
-            maxPosition = 1000;
+            if (screenWidth <= 1920 && screenWidth > 1800) {
+                maxPosition = 0;
+                if (screenWidth <= 1850 && screenWidth > 1800) {
+                    maxPosition = 50;
+                }
+            }
+            else if (screenWidth <= 1800 && screenWidth > 1700) {
+                maxPosition = 80;
+                if (screenWidth <= 1750 && screenWidth > 1700) {
+                    maxPosition = 100;
+                }
+            } else if (screenWidth <= 1700 && screenWidth > 1600) {
+                maxPosition = 160;
+
+            } else if (screenWidth <= 1600 && screenWidth > 1500) {
+                maxPosition = 200;
+                if (screenWidth <= 1555 && screenWidth > 1500) {
+                    maxPosition = 240;
+                }
+            } else if (screenWidth <= 1500 && screenWidth > 1440) {
+                maxPosition = 270;
+            }
+        } else if (screenWidth <= 1440 && screenWidth > 1024) {
+            if (screenWidth <= 1440 && screenWidth > 1300) {
+                maxPosition = 340;
+                if (screenWidth <= 1378 && screenWidth > 1300) {
+                    maxPosition = 400
+                }
+            } else if (screenWidth <= 1300 && screenWidth > 1200) {
+                maxPosition = 450;
+                if (screenWidth <= 1215 && screenWidth > 1200) {
+                    maxPosition = 465;
+                }
+            } else if (screenWidth <= 1200 && screenWidth > 1100) {
+                maxPosition = 520;
+                if (screenWidth <= 1140 && screenWidth > 1100) {
+                    maxPosition = 570;
+                }
+            } else if (screenWidth <= 1100 && screenWidth > 1024) {
+                maxPosition = 620;
+            }
+
         } else if (screenWidth <= 1024 && screenWidth > 768) {
-            maxPosition = 1310;
+            if (screenWidth <= 1024 && screenWidth > 900) {
+                maxPosition = 700;
+                if (screenWidth <= 950 && screenWidth > 900) {
+                    maxPosition = 740;
+                }
+            }
+            else if (screenWidth <= 900 && screenWidth > 800) {
+                maxPosition = 800
+            } else if (screenWidth <= 800 && screenWidth > 768) {
+                maxPosition = 840
+            }
         }
-        else if (screenWidth >= 768) {
-            maxPosition = 1500;
-        } else {
-            maxPosition = 1700; // Если меньше 768, значение maxPosition не меняется
+        else if (screenWidth <= 768 && screenWidth > 425) {
+            if (screenWidth <= 768 && screenWidth > 700) {
+                maxPosition = 860;
+            } else if (screenWidth <= 700 && screenWidth > 600) {
+                maxPosition = 920;
+            } else if (screenWidth <= 600 && screenWidth > 500) {
+                maxPosition = 940;
+                if (screenWidth <= 556 && screenWidth > 524) {
+                    maxPosition = 965;
+                } else if (screenWidth <= 524 && screenWidth > 500) {
+                    maxPosition = 985
+                }
+            }
         }
+        else if (screenWidth <= 425 && screenWidth > 320) {
+            maxPosition = 1030
+        } 
     }
 
     // Функция для скрытия кнопок в зависимости от ширины экрана
@@ -167,7 +228,7 @@ submitButton.addEventListener('click', function () {
     } else {
         adviceElement.textContent = "У вас скорее всго уже диагностирован 2 тип сахарного диабета! Вам нужно срочно обратиться к эндокринологу в эндокринологический диспансер, где Вы должны пройти полное обследование и получить амбулаторное или стационарное лечение. Пройти осмотр в кабинетах “Диабет глаза” и “Диабетическая стопа”, а также пройти обучение самоконтролю в кабинете “Школа диабета” при эндокринологическом диспансере.  ";
     }
-    
+
 
     document.getElementById('result').classList.remove('hidden');
 });
@@ -249,3 +310,4 @@ document.addEventListener("click", function (e) {
         }
     });
 });
+console.clear()
