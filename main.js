@@ -246,34 +246,7 @@ document.getElementById("menu-default").onclick = function () {
     // Если нужно, можно также восстановить overflow для body
     document.getElementById("body").style.overflow = "auto"; // Показываем прокрутку
 }
-document.getElementById("menu-img").addEventListener("click", function () {
-    const dropdown = document.getElementById("drop");
 
-    // Переключение классов для видимости
-    if (dropdown.classList.contains("opacity-0")) {
-        dropdown.classList.remove("opacity-0", "invisible");
-        dropdown.classList.add("opacity-100", "visible");
-    } else {
-        dropdown.classList.add("opacity-0", "invisible");
-        dropdown.classList.remove("opacity-100", "visible");
-    }
-});
-document.addEventListener("click", function (e) {
-    const dropdown = document.getElementById("drop");
-    const button = document.getElementById("menu-img");
-
-    // Проверяем, кликнули ли мы вне кнопки или выпадающего списка
-    if (!dropdown.contains(e.target) && !button.contains(e.target)) {
-        dropdown.classList.add("opacity-0", "invisible");
-        dropdown.classList.remove("opacity-100", "visible");
-    }
-});
-const menuButton = document.getElementById("menu-img");
-const menuIcon = menuButton.querySelector("img");
-
-menuButton.addEventListener("click", () => {
-    menuIcon.classList.toggle("rotate-180");
-});
 document.querySelectorAll(".menu-toggle").forEach((button) => {
     const menuIcon = button.querySelector(".menu-icon");
 
@@ -310,4 +283,23 @@ document.addEventListener("click", function (e) {
         }
     });
 });
-console.clear()
+document.addEventListener("click", function (e) {
+    document.querySelectorAll(".dropdown-menu").forEach((dropdown) => {
+        const menuItem = dropdown.closest(".menu-item");
+        const toggleButton = menuItem.querySelector(".menu-toggle");
+
+        // Проверяем, кликнули ли мы вне меню и кнопки
+        if (!dropdown.contains(e.target) && !toggleButton.contains(e.target)) {
+            // Скрываем дропдаун
+            dropdown.classList.add("opacity-0", "invisible");
+            dropdown.classList.remove("opacity-100", "visible");
+
+            // Находим иконку и сбрасываем её вращение
+            const menuIcon = toggleButton.querySelector(".menu-icon");
+            if (menuIcon) {
+                menuIcon.classList.remove("rotate-180"); // Возвращаем иконку в исходное положение
+            }
+        }
+    });
+});
+// console.clear()
