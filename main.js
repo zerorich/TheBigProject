@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else if (screenWidth <= 425 && screenWidth > 320) {
             maxPosition = 1030
-        } 
+        }
     }
 
     // Функция для скрытия кнопок в зависимости от ширины экрана
@@ -224,8 +224,12 @@ submitButton.addEventListener('click', function () {
     } else if (score <= 14) {
         adviceElement.textContent = "Если входите в эту группу риска, Вам необходимо обратиться к эндокринологу в Эндокринологический диспансер для полного обследования и получить нужные рекомендации. Контролируйте свой сахар в крови каждые 3 месяца и ведите здоровый образ жизни. ";
     } else if (score <= 20) {
+        document.getElementById("form-id").classList.remove("h-[600px]")
+        document.getElementById("form-id").classList.add("h-[800px]")
         adviceElement.textContent = "СИТУАЦИЯ СЕРЬЁЗНАЯ! Вы входите в группу высоко риска развития диабета в течении 10 лет. Вам необходимо срочно не откладывая обратиться в эндокринологический диспансер для прохождения  полного обследования на диабет. Каждый 1 месяц  контролируйте  свой сахар в крови натощак и через 2 часа после еды. Следуйте рекомендациям эндокринолога и ведите здоровый образ жизни. ";
     } else {
+        document.getElementById("form-id").classList.remove("h-[600px]")
+        document.getElementById("form-id").classList.add("h-[800px]")
         adviceElement.textContent = "У вас скорее всго уже диагностирован 2 тип сахарного диабета! Вам нужно срочно обратиться к эндокринологу в эндокринологический диспансер, где Вы должны пройти полное обследование и получить амбулаторное или стационарное лечение. Пройти осмотр в кабинетах “Диабет глаза” и “Диабетическая стопа”, а также пройти обучение самоконтролю в кабинете “Школа диабета” при эндокринологическом диспансере.  ";
     }
 
@@ -301,5 +305,142 @@ document.addEventListener("click", function (e) {
             }
         }
     });
+});
+// document.addEventListener("DOMContentLoaded", () => {
+//     const questions = document.querySelectorAll(".question");
+//     let currentIndex = 0;
+
+//     questions.forEach((question) => {
+//         const radios = question.querySelectorAll("input[type='radio']");
+//         radios.forEach((radio) => {
+//             radio.addEventListener("change", () => {
+//                 // Скрываем текущий вопрос
+//                 question.classList.add("hidden");
+
+//                 // Показываем следующий вопрос
+//                 const nextIndex = currentIndex + 1;
+//                 const nextQuestion = document.querySelector(
+//                     `.question[data-index="${nextIndex}"]`
+//                 );
+//                 if (nextQuestion) {
+//                     nextQuestion.classList.remove("hidden");
+//                     currentIndex = nextIndex;
+//                 } else {
+//                     // Если вопросов больше нет, активируем кнопку
+//                     document.getElementById("submitButton").disabled = false;
+//                 }
+//             });
+//         });
+//     });
+// });
+document.addEventListener("DOMContentLoaded", () => {
+    const questions = document.querySelectorAll(".question");
+    let currentIndex = 0;
+
+    // Функция для отображения текущего вопроса
+    function showQuestion(index) {
+        questions.forEach((question, i) => {
+            question.classList.toggle("hidden", i !== index);
+        });
+        updateNextButtonVisibility();
+    }
+
+    // Функция для обновления видимости кнопки "Далее"
+    function updateNextButtonVisibility() {
+        const currentQuestion = questions[currentIndex];
+        const inputs = currentQuestion.querySelectorAll('input[type="radio"]');
+        const nextButton = currentQuestion.querySelector('.next-button');
+        const isAnswered = Array.from(inputs).some(input => input.checked);
+        nextButton.classList.toggle("hidden", !isAnswered);
+    }
+
+    // Обработчик изменения состояния радиокнопок
+    questions.forEach((question) => {
+        const inputs = question.querySelectorAll('input[type="radio"]');
+        inputs.forEach((input) => {
+            input.addEventListener("change", updateNextButtonVisibility);
+        });
+    });
+
+    // Обработчик нажатия на кнопку "Далее"
+    document.querySelectorAll('.next-button').forEach((button) => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault(); // Предотвращаем стандартное поведение кнопки
+            currentIndex++;
+            if (currentIndex < questions.length) {
+                showQuestion(currentIndex);
+            }
+            // Скрыть кнопку "Далее", если это последний вопрос
+            if (currentIndex === questions.length - 1) {
+                button.classList.add("hidden");
+            }
+            // Показать кнопку "Рассчитать", если все вопросы отвечены
+            if (currentIndex === questions.length) {
+                document.getElementById("submitButton").classList.remove("hidden");
+            }
+        });
+    });
+
+    // Показать первый вопрос при загрузке
+    showQuestion(currentIndex);
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const questions = document.querySelectorAll(".question");
+    let currentIndex = 0;
+
+    // Функция для отображения текущего вопроса
+    function showQuestion(index) {
+        questions.forEach((question, i) => {
+            question.classList.toggle("hidden", i !== index);
+        });
+        updateNextButtonVisibility();
+    }
+
+    // Функция для обновления видимости кнопки "Далее"
+    function updateNextButtonVisibility() {
+        const currentQuestion = questions[currentIndex];
+        const inputs = currentQuestion.querySelectorAll('input[type="radio"]');
+        const nextButton = currentQuestion.querySelector('.next-button');
+        const isAnswered = Array.from(inputs).some(input => input.checked);
+        nextButton.classList.toggle("hidden", !isAnswered);
+    }
+
+    // Обработчик изменения состояния радиокнопок
+    questions.forEach((question) => {
+        const inputs = question.querySelectorAll('input[type="radio"]');
+        inputs.forEach((input) => {
+            input.addEventListener("change", updateNextButtonVisibility);
+        });
+    });
+
+    // Обработчик нажатия на кнопку "Далее"
+    document.querySelectorAll('.next-button').forEach((button) => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault(); // Предотвращаем стандартное поведение кнопки
+            currentIndex++;
+            if (currentIndex < questions.length) {
+                showQuestion(currentIndex);
+            }
+            // Скрыть кнопку "Далее", если это последний вопрос
+            if (currentIndex === questions.length - 1) {
+                button.classList.add("hidden");
+            }
+            // Проверка на 8 вопросе
+            if (currentIndex === questions.length) {
+                const lastQuestionInputs = questions[currentIndex - 1].querySelectorAll('input[type="radio"]');
+                const isLastQuestionAnswered = Array.from(lastQuestionInputs).some(input => input.checked);
+                if (isLastQuestionAnswered) {
+                    document.getElementById("submitButton").classList.remove("hidden");
+                } else {
+                    alert("Пожалуйста, выберите ответ на последний вопрос.");
+                    currentIndex--; // Возвращаемся к последнему вопросу
+                    showQuestion(currentIndex);
+                }
+            }
+        });
+    });
+
+    // Показать первый вопрос при загрузке
+    showQuestion(currentIndex);
 });
 // console.clear()

@@ -16,6 +16,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <style>
         * {
@@ -384,117 +386,126 @@
             </div>
         </section>
         <section>
-            <div class="bg-gray-100 p-6">
-                <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
-                    <h1 class="text-2xl font-bold mb-6">Проверь себя на Диабет</h1>
-                    <form id="testForm" class="space-y-4">
-                        <div class="question">
-                            <p class="font-medium">0. Ваш Пол?</p>
-                            <label class="block">
-                                <input type="radio" name="q" value="0" class="mr-2"> Мужской
+            <div class="bg-gray-100 p-6 max-[768px]:p-0">
+                <div id="form-id" class="w-full h-[600px] mx-auto bg-white justify-between shadow-md rounded-lg p-6 px-20 flex items-center max-[768px]:justify-center max-[768px]:items-center max-[768px]:p-2">
+                    <form id="testForm" class="space-y-4 font-[montserrat]">
+                        <h1 class="text-4xl font-bold mb-6 font-[montserrat]">Проверь себя на Диабет</h1>
+                        <div class="question" data-index="0">
+                            <p class="font-medium font-[montserrat] flex flex-col gap-2"><span class="">Вопрос: 0 из 8</span><span class="text-3xl">Ваш Пол?</span></p>
+                            <label class="flex items-center">
+                                <input type="radio" name="q" value="0" class="mr-2 w-5 h-5"><span class="text-xl">Мужской</span>
                             </label>
-                            <label class="block">
-                                <input type="radio" name="q" value="1" class="mr-2"> Женский
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q" value="1" class="mr-2 w-5 h-5"> Женский
                             </label>
+                            <button class="next-button mt-4 bg-blue-500 text-white py-2 px-4 rounded" id="nextBtn">Далее</button>
                         </div>
                         <!-- Question 1 -->
-                        <div class="question">
-                            <p class="font-medium">1. Ваш возраст?</p>
-                            <label class="block">
-                                <input type="radio" name="q1" value="0" class="mr-2"> Меньше 40 лет
+                        <div class="question hidden" data-index="1">
+                            <p class="font-medium font-[montserrat] flex flex-col gap-2"><span class="">Вопрос: 1 из 8</span><span class="text-3xl">Ваш Возраст?</span></p>
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q1" value="0" class="mr-2 w-5 h-5"> Меньше 40 лет
                             </label>
-                            <label class="block">
-                                <input type="radio" name="q1" value="2" class="mr-2"> 40-49 лет
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q1" value="2" class="mr-2 w-5 h-5"> 40-49 лет
                             </label>
-                            <label class="block">
-                                <input type="radio" name="q1" value="3" class="mr-2"> 50-59 лет
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q1" value="3" class="mr-2 w-5 h-5"> 50-59 лет
                             </label>
-                            <label class="block">
-                                <input type="radio" name="q1" value="4" class="mr-2"> Больше 60 лет
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q1" value="4" class="mr-2 w-5 h-5"> Больше 60 лет
                             </label>
+                            <button class="next-button hidden mt-4 bg-blue-500 text-white py-2 px-4 rounded" id="nextBtn">Далее</button>
                         </div>
 
                         <!-- Question 2 -->
-                        <div class="question">
-                            <p class="font-medium">2. Ваш вес?</p>
-                            <label class="block">
-                                <input type="radio" name="q2" value="0" class="mr-2"> Меньше 65 кг
+                        <div class="question hidden" data-index="2">
+                            <p class="font-medium font-[montserrat] flex flex-col gap-2"><span class="">Вопрос: 2 из 8</span><span class="text-3xl">Ваш Вес?</span></p>
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q2" value="0" class="mr-2 w-5 h-5"> Меньше 65 кг
                             </label>
-                            <label class="block">
-                                <input type="radio" name="q2" value="2" class="mr-2"> До 100 кг
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q2" value="2" class="mr-2 w-5 h-5"> До 100 кг
                             </label>
-                            <label class="block">
-                                <input type="radio" name="q2" value="3" class="mr-2"> Более 100 кг
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q2" value="3" class="mr-2 w-5 h-5"> Более 100 кг
                             </label>
+                            <button class="next-button hidden mt-4 bg-blue-500 text-white py-2 px-4 rounded" id="nextBtn">Далее</button>
                         </div>
 
                         <!-- Question 3 -->
-                        <div class="question">
-                            <p class="font-medium">3. У вас были случаи инфаркта или инсульта?</p>
-                            <label class="block">
-                                <input type="radio" name="q3" value="0" class="mr-2"> Нет
+                        <div class="question hidden" data-index="3">
+                            <p class="font-medium font-[montserrat] flex flex-col gap-2"><span class="">Вопрос: 3 из 8</span><span class="text-3xl">У вас были случаи инфаркта или инсульта?</span></p>
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q3" value="0" class="mr-2 w-5 h-5"> Нет
                             </label>
-                            <label class="block">
-                                <input type="radio" name="q3" value="3" class="mr-2"> Да
+                            <label class="flex items-center text-xl">
+                                <input type="radio" name="q3" value="3" class="mr-2 w-5 h-5"> Да
                             </label>
+                            <button class="next-button hidden mt-4 bg-blue-500 text-white py-2 px-4 rounded" id="nextBtn">Далее</button>
                         </div>
 
                         <!-- Question 4 -->
-                        <div class="question">
+                        <div class="question hidden" data-index="4">
                             <p class="font-medium">4. Вы ежедневно занимаетесь физическими упражнениями?</p>
                             <label class="block">
-                                <input type="radio" name="q4" value="3" class="mr-2"> Нет
+                                <input type="radio" name="q4" value="3" class="mr-2 w-5 h-5"> Нет
                             </label>
                             <label class="block">
-                                <input type="radio" name="q4" value="0" class="mr-2"> Да
+                                <input type="radio" name="q4" value="0" class="mr-2 w-5 h-5"> Да
                             </label>
+                            <button class="next-button hidden mt-4 bg-blue-500 text-white py-2 px-4 rounded" id="nextBtn">Далее</button>
                         </div>
 
                         <!-- Question 5 -->
-                        <div class="question">
+                        <div class="question hidden" data-index="5">
                             <p class="font-medium">5. Есть ли у вас ребёнок с весом при рождении более 4 кг?</p>
                             <label class="block">
-                                <input type="radio" name="q5" value="0" class="mr-2"> Нет
+                                <input type="radio" name="q5" value="0" class="mr-2 w-5 h-5"> Нет
                             </label>
                             <label class="block">
-                                <input type="radio" name="q5" value="3" class="mr-2"> Да
+                                <input type="radio" name="q5" value="3" class="mr-2 w-5 h-5"> Да
                             </label>
+                            <button class="next-button hidden mt-4 bg-blue-500 text-white py-2 px-4 rounded" id="nextBtn">Далее</button>
                         </div>
 
                         <!-- Question 6 -->
-                        <div class="question">
+                        <div class="question hidden" data-index="6">
                             <p class="font-medium">6. Были ли у вас случаи высокого уровня сахара в крови?</p>
                             <label class="block">
-                                <input type="radio" name="q6" value="0" class="mr-2"> Нет
+                                <input type="radio" name="q6" value="0" class="mr-2 w-5 h-5"> Нет
                             </label>
                             <label class="block">
-                                <input type="radio" name="q6" value="5" class="mr-2"> Да
+                                <input type="radio" name="q6" value="5" class="mr-2 w-5 h-5"> Да
                             </label>
+                            <button class="next-button hidden mt-4 bg-blue-500 text-white py-2 px-4 rounded" id="nextBtn">Далее</button>
                         </div>
 
                         <!-- Question 7 -->
-                        <div class="question">
+                        <div class="question hidden" data-index="7">
                             <p class="font-medium">7. Ваше артериальное давление?</p>
                             <label class="block">
-                                <input type="radio" name="q7" value="0" class="mr-2"> Ниже 130/80 мм рт. ст.
+                                <input type="radio" name="q7" value="0" class="mr-2 w-5 h-5"> Ниже 130/80 мм рт. ст.
                             </label>
                             <label class="block">
-                                <input type="radio" name="q7" value="3" class="mr-2"> Выше 130/80 мм рт. ст.
+                                <input type="radio" name="q7" value="3" class="mr-2 w-5 h-5"> Выше 130/80 мм рт. ст.
                             </label>
+                            <button class="next-button hidden mt-4 bg-blue-500 text-white py-2 px-4 rounded" id="nextBtn">Далее</button>
                         </div>
 
                         <!-- Question 8 -->
-                        <div class="question">
+                        <div class="question hidden" data-index="8">
                             <p class="font-medium">8. Есть ли среди ваших родственников больные сахарным диабетом?</p>
                             <label class="block">
-                                <input type="radio" name="q8" value="0" class="mr-2"> Нет
+                                <input type="radio" name="q8" value="0" class="mr-2 w-5 h-5"> Нет
                             </label>
                             <label class="block">
-                                <input type="radio" name="q8" value="2" class="mr-2"> Да, но дальние родственники
+                                <input type="radio" name="q8" value="2" class="mr-2 w-5 h-5"> Да, но дальние родственники
                             </label>
                             <label class="block">
-                                <input type="radio" name="q8" value="5" class="mr-2"> Да, близкие родственники
+                                <input type="radio" name="q8" value="5" class="mr-2 w-5 h-5"> Да, близкие родственники
                             </label>
+                            <button class="next-button hidden mt-4 bg-blue-500 text-white py-2 px-4 rounded" id="nextBtn">Далее</button>
                         </div>
 
                         <button type="button" id="submitButton"
@@ -502,13 +513,20 @@
                             disabled>
                             Рассчитать
                         </button>
+                        <div id="result" class="mt-6 hidden md:w-[600px]">
+                            <h2 class="text-xl font-bold">Ваш общий результат:</h2>
+                            <p id="score" class="text-lg mt-2"></p>
+                            <p id="advice" class="text-lg mt-4 font-medium"></p>
+                        </div>
                     </form>
-
-                    <div id="result" class="mt-6 hidden">
-                        <h2 class="text-xl font-bold">Ваш общий результат:</h2>
-                        <p id="score" class="text-lg mt-2"></p>
-                        <p id="advice" class="text-lg mt-4 font-medium"></p>
-                    </div>
+                    <div
+                    class="relative w-full overflow-hidden rounded-lg md:before before:absolute before:block before:size-full before:bg-gradient-to-t before:from-black md:w-1/2 md:before:hidden justify-end max-[768px]:hidden">
+                    <figure class="flex justify-end"><img alt="" fetchpriority="high" width="736" height="1053" decoding="async" data-nimg="1"
+                            class="min-h-[451px] w-full rounded-lg md:min-h-0 max-w-[500px]" sizes="(min-width: 1208px) 1208px, 80vw"
+                            srcset="" src="/TheBigProject/assets/img/medical.png"
+                            style="color: transparent; object-fit: cover;"></figure>
+                </div>
+                    
                 </div>
             </div>
         </section>
@@ -523,7 +541,8 @@
                         class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 top-[6px] rotate-45"></span><span
                         class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 opacity-0"></span><span
                         class="ease-[cubic-bezier(0.25, 0.75, 1)] relative block h-[2px] w-[30px] bg-black duration-300 top-[-6px] -rotate-45"></span></button>
-                <a href="index.html"><img src="/TheBigProject/assets/icons/logo.jpg" alt="" class="w-[150px] h-[150px]"></a>
+                <a href="index.html"><img src="/TheBigProject/assets/icons/logo.jpg" alt=""
+                        class="w-[150px] h-[150px]"></a>
                 <a href="error.html"
                     class="font-[roboto] text-[18px] text-[#142C3E] px-5 py-2 border-[1px] border-black rounded-xl font-bold hover:bg-black hover:text-white max-[768px]:border-[0px] max-[768px]:px-0">Подписаться</a>
             </div>
@@ -662,7 +681,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="menu-item flex flex-col w-[100%] gap-5">
                             <div class="relative group w-[100%]">
                                 <div class="flex items-center justify-between gap-2 w-[100%]">
