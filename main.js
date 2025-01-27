@@ -421,20 +421,22 @@ document.addEventListener("DOMContentLoaded", () => {
             if (currentIndex < questions.length) {
                 showQuestion(currentIndex);
             }
-            // Скрыть кнопку "Далее", если это последний вопрос
-            if (currentIndex === questions.length - 1) {
-                button.classList.add("hidden");
-            }
             // Проверка на 8 вопросе
             if (currentIndex === questions.length) {
                 const lastQuestionInputs = questions[currentIndex - 1].querySelectorAll('input[type="radio"]');
                 const isLastQuestionAnswered = Array.from(lastQuestionInputs).some(input => input.checked);
                 if (isLastQuestionAnswered) {
                     document.getElementById("submitButton").classList.remove("hidden");
+                    button.classList.add("hidden"); // Скрываем кнопку "Далее"
                 } else {
                     alert("Пожалуйста, выберите ответ на последний вопрос.");
                     currentIndex--; // Возвращаемся к последнему вопросу
                     showQuestion(currentIndex);
+                }
+            } else {
+                // Скрыть кнопку "Далее", если это последний вопрос
+                if (currentIndex === questions.length - 1) {
+                    button.classList.add("hidden");
                 }
             }
         });
