@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('next-btn');
 
     let currentPosition = 0;
-    const cardWidth = 340; // Ширина карточки
+    let cardWidth = 340; // Ширина карточки
 
     let maxPosition = 1000; // Изначальное значение maxPosition
 
@@ -17,59 +17,49 @@ document.addEventListener('DOMContentLoaded', () => {
         if (screenWidth >= 1920) {
             maxPosition = 0;
         } else if (screenWidth <= 1920 && screenWidth > 1440) {
-            if (screenWidth <= 1920 && screenWidth > 1800) {
+            maxPosition = 0
+            if (screenWidth <= 1600 && screenWidth > 1500) {
                 maxPosition = 0;
-                if (screenWidth <= 1850 && screenWidth > 1800) {
-                    maxPosition = 50;
-                }
-            }
-            else if (screenWidth <= 1800 && screenWidth > 1700) {
-                maxPosition = 80;
-                if (screenWidth <= 1750 && screenWidth > 1700) {
-                    maxPosition = 100;
-                }
-            } else if (screenWidth <= 1700 && screenWidth > 1600) {
-                maxPosition = 160;
-
-            } else if (screenWidth <= 1600 && screenWidth > 1500) {
-                maxPosition = 200;
-                if (screenWidth <= 1555 && screenWidth > 1500) {
-                    maxPosition = 240;
+                if (screenWidth <= 1520 && screenWidth > 1500) {
+                    maxPosition = 10;
                 }
             } else if (screenWidth <= 1500 && screenWidth > 1440) {
-                maxPosition = 270;
+                maxPosition = 130;
             }
         } else if (screenWidth <= 1440 && screenWidth > 1024) {
             if (screenWidth <= 1440 && screenWidth > 1300) {
-                maxPosition = 340;
+                maxPosition = 170;
                 if (screenWidth <= 1378 && screenWidth > 1300) {
-                    maxPosition = 400
+                    maxPosition = 210
                 }
             } else if (screenWidth <= 1300 && screenWidth > 1200) {
-                maxPosition = 450;
+                maxPosition = 220;
                 if (screenWidth <= 1215 && screenWidth > 1200) {
-                    maxPosition = 465;
+                    maxPosition = 300;
                 }
             } else if (screenWidth <= 1200 && screenWidth > 1100) {
-                maxPosition = 520;
+                maxPosition = 350;
                 if (screenWidth <= 1140 && screenWidth > 1100) {
-                    maxPosition = 570;
+                    maxPosition = 370;
                 }
             } else if (screenWidth <= 1100 && screenWidth > 1024) {
-                maxPosition = 620;
+                maxPosition = 440;
             }
 
         } else if (screenWidth <= 1024 && screenWidth > 768) {
             if (screenWidth <= 1024 && screenWidth > 900) {
-                maxPosition = 700;
+                maxPosition = 520;
                 if (screenWidth <= 950 && screenWidth > 900) {
-                    maxPosition = 740;
+                    maxPosition = 550;
                 }
             }
             else if (screenWidth <= 900 && screenWidth > 800) {
-                maxPosition = 800
+                maxPosition = 620
+                if (screenWidth <= 840 && screenWidth > 800) {
+                    maxPosition = 650
+                }
             } else if (screenWidth <= 800 && screenWidth > 768) {
-                maxPosition = 840
+                maxPosition = 720
             }
         }
         else if (screenWidth <= 768 && screenWidth > 425) {
@@ -86,8 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
-        else if (screenWidth <= 425 && screenWidth > 320) {
+        else if (screenWidth <= 425 && screenWidth > 375) {
             maxPosition = 1030
+        } else {
+            maxPosition = 1045
+            cardWidth = 345
         }
     }
 

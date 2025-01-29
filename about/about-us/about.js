@@ -34,7 +34,7 @@ document.getElementById("menu-default").onclick = function () {
     // Добавляем класс 'hidden', чтобы скрыть меню
     document.getElementById("menu-425").classList.add('hidden');
     document.getElementById('body').classList.add('block')
-    document.querySelector('main').classList.add('block')
+    // document.querySelector('main').classList.add('block')
     document.querySelector('header').classList.add('block')
     document.querySelector('footer').classList.add('block')
     document.querySelector('main').classList.remove('hidden')
