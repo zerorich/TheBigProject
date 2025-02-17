@@ -68,78 +68,124 @@ document.addEventListener("click", function (e) {
         }
     });
 });
-document.getElementById("submitBtn").addEventListener("click", async function (event) {
-    event.preventDefault(); // Остановить стандартную отправку формы
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const submitBtn = document.getElementById("submitBtn");
+    const inputs = document.querySelectorAll(".input-field");
+    const radioButtons = document.querySelectorAll("input[name='SD']");
+    const errorMessage = document.querySelector(".error-message");
 
-    let isValid = true;
-    let inputs = document.querySelectorAll(".input-field");
+    submitBtn.addEventListener("click", async function (event) {
+        event.preventDefault(); // Остановить стандартную отправку формы
 
-    // Проверка всех полей
-    inputs.forEach(input => {
-        let errorSpan = input.nextElementSibling;
-        if (input.value.trim() === "") {
-            input.style.border = "2px solid red"; // Красная рамка
-            errorSpan.textContent = "Заполните это поле!";
-            errorSpan.style.color = "red";
-            errorSpan.style.fontSize = "14px";
+        let isValid = true;
+
+        // Проверка всех текстовых полей
+        inputs.forEach(input => {
+            let errorSpan = input.nextElementSibling;
+            if (!errorSpan || input.type === "radio") return; // Пропускаем радиокнопки
+
+            if (input.value.trim() === "") {
+                input.style.border = "2px solid red";
+                errorSpan.textContent = "Заполните это поле!";
+                errorSpan.style.color = "red";
+                errorSpan.style.fontSize = "14px";
+                isValid = false;
+            } else {
+                input.style.border = "1px solid #A1A1A1";
+                errorSpan.textContent = "";
+            }
+        });
+
+        // Проверка радиокнопок
+        let checked = Array.from(radioButtons).some(radio => radio.checked);
+        if (!checked) {
+            errorMessage.classList.remove("hidden");
+            errorMessage.style.color = "red";
+            errorMessage.style.fontSize = "14px";
             isValid = false;
         } else {
-            input.style.border = "1px solid #A1A1A1"; // Вернуть серую рамку
-            errorSpan.textContent = "";
+            errorMessage.classList.add("hidden");
         }
+
+        if (!isValid) return; // Если есть ошибки - не отправляем форму
+
+        // Данные из формы
+        let formData = {
+            Имя: inputs[0].value,
+            Фамилия: inputs[1].value,
+            Отчество: inputs[2].value,
+            "Место Учёбы/Работы": inputs[3].value,
+            "Номер телефона": inputs[4].value,
+            "Серия и Номер Паспорта": inputs[5].value,
+            "Кем Выдан": inputs[6].value,
+            "Когда Выдан": inputs[7].value,
+            "СД": checked ? document.querySelector("input[name='SD']:checked").value : "Не указано"
+        };
+        if (formData["СД"] == "one") {
+            formData["СД"] = "Первый тип";
+        } else if (formData["СД"] == "two") {
+            formData["СД"] = "Второй тип";
+        } else if (formData["СД"] == "no") {
+            formData["СД"] = "Не болеет Сахарным Диабетом";
+            // document.querySelectorAll(".year").forEach(element => element.classList.add("hidden"));
+        }
+        this.addEventListener("input", (event) => {
+            if (formdata["СД"] == "one") {
+                document.querySelectorAll(".year").forEach(element => element.classList.remove("hidden"));
+            } else if (formdata["СД"] == "two") {
+                document.querySelectorAll(".year").forEach(element => element.classList.remove("hidden"));
+            } else if (formdata["СД"] == "no") {
+                document.querySelectorAll(".year").forEach(element => element.classList.add("hidden"));
+            }
+        })
+        let message = `📩 *Новая заявка!*\n\n` +
+            `👤 *Имя:* ${formData.Имя}\n` +
+            `👤 *Фамилия:* ${formData.Фамилия}\n` +
+            `👤 *Отчество:* ${formData.Отчество}\n` +
+            `🏫 *Место Учёбы/Работы:* ${formData["Место Учёбы/Работы"]}\n` +
+            `📞 *Номер телефона:* ${formData["Номер телефона"]}\n` +
+            `🆔 *Паспорт:* ${formData["Серия и Номер Паспорта"]}\n` +
+            `📌 *Кем Выдан:* ${formData["Кем Выдан"]}\n` +
+            `📅 *Когда Выдан:* ${formData["Когда Выдан"]}\n` +
+            `🩺 *Тип СД:* ${formData["СД"]}`;
+        // let message = `Бот Закрывается на проведение теста radio кнопок!`
+        let botToken = "7915125873:AAEvXOF43h_OfIVfLFkExxqJt3ixwcL54vY";
+        let chatIds = ["5879096855", "6394479272"];
+        // let chatIds = ["6394479272"];
+        let url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+        for (let chatId of chatIds) {
+            await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: "Markdown"
+                })
+            });
+        }
+
+        alert("✅ Заявка успешно отправлена!");
+        inputs.forEach(input => input.value = ""); // Очистить текстовые поля
+        radioButtons.forEach(radio => radio.checked = false); // Сбросить радиокнопки
     });
 
-    if (!isValid) return; // Если есть ошибки - не отправлять
-
-    // Данные из формы
-    let formData = {
-        Имя: document.querySelectorAll(".input-field")[0].value,
-        Фамилия: document.querySelectorAll(".input-field")[1].value,
-        Отчество: document.querySelectorAll(".input-field")[2].value,
-        "Место Учёбы/Работы": document.querySelectorAll(".input-field")[3].value,
-        "Номер телефона": document.querySelectorAll(".input-field")[4].value,
-        "Серия и Номер Паспорта": document.querySelectorAll(".input-field")[5].value,
-        "Кем Выдан": document.querySelectorAll(".input-field")[6].value,
-        "Когда Выдан": document.querySelectorAll(".input-field")[7].value,
-    };
-
-    let message = `📩 *Новая заявка!*\n\n` +
-        `👤 *Имя:* ${formData.Имя}\n` +
-        `👤 *Фамилия:* ${formData.Фамилия}\n` +
-        `👤 *Отчество:* ${formData.Отчество}\n` +
-        `🏫 *Место Учёбы/Работы:* ${formData["Место Учёбы/Работы"]}\n` +
-        `📞 *Номер телефона:* ${formData["Номер телефона"]}\n` +
-        `🆔 *Паспорт:* ${formData["Серия и Номер Паспорта"]}\n` +
-        `📌 *Кем Выдан:* ${formData["Кем Выдан"]}\n` +
-        `📅 *Когда Выдан:* ${formData["Когда Выдан"]}`;
-
-    let botToken = "7915125873:AAEvXOF43h_OfIVfLFkExxqJt3ixwcL54vY"; // Токен бота
-    let chatIds = ["5879096855", "6394479272"]; // Список ID получателей
-
-    let url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-    // Отправляем сообщение каждому получателю
-    for (let chatId of chatIds) {
-        await fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: message,
-                parse_mode: "Markdown"
-            })
+    // Убираем ошибку при вводе данных
+    inputs.forEach(input => {
+        input.addEventListener("input", function () {
+            let errorSpan = this.nextElementSibling;
+            if (!errorSpan || this.type === "radio") return;
+            this.style.border = "1px solid #A1A1A1";
+            errorSpan.textContent = "";
         });
-    }
+    });
 
-    alert("✅ Заявка успешно отправлена!");
-    inputs.forEach(input => input.value = ""); // Очистить поля после успешной отправки
-});
-
-// Убираем ошибку при вводе данных
-document.querySelectorAll(".input-field").forEach(input => {
-    input.addEventListener("input", function () {
-        let errorSpan = this.nextElementSibling;
-        this.style.border = "1px solid #A1A1A1"; // Вернуть стандартную рамку
-        errorSpan.textContent = ""; // Убрать ошибку
+    // Убираем ошибку при выборе радиокнопок
+    radioButtons.forEach(radio => {
+        radio.addEventListener("change", function () {
+            errorMessage.classList.add("hidden");
+        });
     });
 });
