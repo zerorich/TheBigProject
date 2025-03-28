@@ -1,0 +1,487 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body id="body" class="body">
+    <header class="flex flex-col mx-auto max-w-[1388px] max-[1400px]:px-[2%] max-[768px]:px-0">
+        <nav class="flex items-center h-[176px] justify-between max-[768px]:px-[2%]">
+
+            <button id="menu-button" data-collapse-toggle="navbar-default" type="button"
+                class="z-50 flex-col items-center rounded-lg py-4 hover:bg-white hidden max-[768px]:inline-flex"
+                aria-controls="navbar-default" aria-expanded="false" aria-pressed="false"
+                aria-label="Открыть навигацию">
+                <span class="sr-only">Открыть главное меню</span>
+                <span
+                    class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300"></span>
+                <span
+                    class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300"></span>
+                <span
+                    class="ease-[cubic-bezier(0.25, 0.75, 1)] relative block h-[2px] w-[30px] bg-black duration-300"></span>
+            </button>
+            <a href="/TheBigProject/client/main-menu/index.html"><img src="/TheBigProject/client/assets/icons/logo.png" alt=""
+                    class="w-[150px] h-[150px]"></a>
+            <div class="flex flex-col items-end gap-[18px] top-0 left-0 right-0 bottom-0">
+                <div class="flex gap-2">
+                    <a href="/TheBigProject/client/error-page/error.html"
+                        class="font-[roboto] text-[18px] text-[#142C3E] px-5 py-2 hidden max-[768px]:block border-[1px] border-black rounded-xl font-bold hover:bg-black hover:text-white max-[768px]:border-[0px] max-[768px]:px-0">Подписаться</a>
+                    <a href="/TheBigProject/client/organization/organization.html"
+                        class="font-[roboto] text-[18px] text-[#142C3E] px-5 py-2 border-[1px] border-black rounded-xl font-bold hover:bg-black hover:text-white max-[768px]:border-[0px] max-[768px]:hidden max-[768px]:px-0">Стать
+                        Членом Организации</a>
+                    <a href="/TheBigProject/client/error-page/error.html"
+                        class="font-[roboto] text-[18px] text-white px-5 py-2 bg-[#26686E] pr-8 rounded-xl font-bold flex gap-2 hover:bg-[#65b1a0] duration-200 max-[768px]:hidden"><img
+                            src="/TheBigProject/client/assets/icons/Vector.svg" alt="">Пожертвовать</a>
+                </div>
+                <div id="menu" class="flex gap-5 justify-end max-[768px]:hidden">
+                    <div class="relative group">
+                        <a href="/TheBigProject/client/error-page/error.html"
+                            class="flex items-center font-[roboto] gap-2 text-[#224055] text-[18px] h-[26px] border-transparent border-b-[1px] group-hover:border-[#224055] transition-colors">
+                            О Нас
+                            <img class="w-[15px] h-2 transition-transform duration-300 group-hover:rotate-180"
+                                src="/TheBigProject/client/assets/icons/Vector.png" alt="">
+                        </a>
+                        <div
+                            class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 top-full right-0 mt-2 w-[288px] bg-white shadow-lg rounded-xl z-50">
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Способы
+                                Пожертвования</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Наша
+                                Миссия</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Члены Правления</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">События</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Программа</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Отчеты о
+                                Воздействии</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Спонсоры</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-b-xl">Свяжитесь
+                                с
+                                Нами</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="/TheBigProject/client/error-page/error.html"
+                            class="flex items-center font-[roboto] gap-2 text-[#224055] text-[18px] h-[26px] border-transparent border-b-[1px] group-hover:border-[#224055] transition-colors">
+                            Проекты
+                            <img class="w-[15px] h-2 transition-transform duration-300 group-hover:rotate-180"
+                                src="/TheBigProject/client/assets/icons/Vector.png" alt="">
+                        </a>
+                        <div
+                            class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 top-full right-0 mt-2 w-[450px] bg-white shadow-lg rounded-xl z-50">
+                            <a href="/TheBigProject/client/projects/project-1/project.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Профилактика
+                                слепоты у людей с СД в Узбекистане</a>
+                            <a href="/TheBigProject/client/projects/project-2/project.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Профилактика
+                                ампутаций нижних конечностей у людей с СД в Узбекистане</a>
+                            <a href="/TheBigProject/client/projects/project-3/project.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Профилактика
+                                диабета среди сельского населения Узбекистана</a>
+                            <a href="/TheBigProject/client/projects/project-4/project.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Стратегия
+                                профилактики и мониторинга гестационного диабета в Узбекистане</a>
+                            <a href="/TheBigProject/client/projects/project-5/project.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Здоровый ребенок –
+                                здоровое будущее</a>
+                            <a href="/TheBigProject/client/projects/project-6/project.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Здоровый образ
+                                жизни – профилактика диабета</a>
+                            <a href="/TheBigProject/client/projects/project-7/project.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">На уровне первичной
+                                медико-санитарной помощи: укрепление системы профилактики, ранней диагностики лиц из
+                                группы риска и диабета среди населения, проживающего в отдаленных сельских районах
+                                Узбекистана.</a>
+                            <a href="/TheBigProject/client/projects/project-8/project.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-b-xl">Оценка
+                                состояния здоровья населения Приаралья и формирование устойчивой мотивации к здоровому
+                                образу жизни для укрепления их здоровья.</a>
+                            <a href="/TheBigProject/client/projects/project-9/project.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-b-xl">Повышение
+                                уровня знаний и навыков самоконтроля среди молодежи с сахарным диабетом 1 типа для
+                                улучшения их качества и продолжительности жизни</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="/TheBigProject/client/error-page/error.html"
+                            class="flex items-center font-[roboto] gap-2 text-[#224055] text-[18px] h-[26px] border-transparent border-b-[1px] group-hover:border-[#224055] transition-colors">
+                            Понимание Диабетa
+                            <img class="w-[15px] h-2 transition-transform duration-300 group-hover:rotate-180"
+                                src="/TheBigProject/client/assets/icons/Vector.png" alt="">
+                        </a>
+                        <div
+                            class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 top-full right-0 mt-2 w-[288px] bg-white shadow-lg rounded-xl z-50">
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Сахарный
+                                Диабета 1 типа</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Сахарный
+                                Диабета 2 типа</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Преддиабет</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Гестационный
+                                Диабет</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Управление
+                                Диабетом</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Технология
+                                Лечения Диабета</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Осложнения
+                                Сахарного Диабета</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Лекарства
+                                От Диабета</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Осложнения
+                                Сахарного Диабета</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Исследования
+                                Диабета</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="/TheBigProject/client/error-page/error.html"
+                            class="flex items-center font-[roboto] gap-2 text-[#224055] text-[18px] h-[26px] border-transparent border-b-[1px] group-hover:border-[#224055] transition-colors">
+                            Профилактика Диабета
+                            <img class="w-[15px] h-2 transition-transform duration-300 group-hover:rotate-180"
+                                src="/TheBigProject/client/assets/icons/Vector.png" alt="">
+                        </a>
+                        <div
+                            class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 top-full right-0 mt-2 w-[288px] bg-white shadow-lg rounded-xl z-50">
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Упражнения</a>
+                            <a href="/TheBigProject/client/error-page/error.html" error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Психологическое
+                                Здоровье</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Диета и
+                                Питание</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Образы
+                                жизни</a>
+                            <a href="/TheBigProject/client/error-page/error.html"
+                                class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-b-xl">Рецепты</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section
+            class="flex flex-col py-[100px] font-[montserrat] mx-auto max-w-[1388px] max-[1400px]:px-[2%] max-[768px]:px-0">
+            <h1 class="text-[36px] font-medium max-[768px]:text-center max-[768px]:text-[32px] max-[475px]:text-[24px]">
+                Проект «Здоровый образ жизни – профилактика диабета»</h1>
+            <div class="mt-[20px] ">
+                <p class="text-[20px] max-[475px]:text-[16px]">Срок реализации: 01.10.2021 - 31.03.2022 гг.</p>
+                <p class="text-[24px] mt-[50px] max-[768px]:text-[20px] text-justify">
+                    <span class="font-medium text-justify">Цель:</span> Проект реализовать в Республике Каракалпакстан.
+                    В
+                    рамках проекта в махаллях провести беседы на тему «Здоровый образ жизни – профилактика диабета»
+                    среди сельских жителей. Оказать адресная гуманитарная помощь больным сахарным диабетом из
+                    малообеспеченных семей, в том числе средствами самоконтроля. <br><br>
+                    <span class="font-medium">Работа, реализованная в
+                        рамках проекта:</span> В махаллях проведены беседы «Здоровый образ жизни – профилактика СД»
+                    среди 819 сельского населения, 70 больным СД из малоимущих семей оказана адресная гуманитарная
+                    помощь, предоставлены средаства самоконтроля .
+                </p>
+            </div>
+        </section>
+    </main>
+    <div class="hidden bg-white w-full h-screen" id="menu-425">
+        <nav class="flex flex-col gap-2 px-[13.4%] max-[1314px]:px-[9%] max-[1119px]:px-[2%]">
+            <div class="flex items-center h-[176px] justify-between ">
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="z-50 inline-flex flex-col items-center rounded-lg py-4 hover:bg-white lg:hidden"
+                    aria-controls="navbar-default" aria-expanded="true" aria-pressed="true" id="menu-default"
+                    aria-label="Close Navigation"><span class="sr-only">Open main menu</span><span
+                        class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 top-[6px] rotate-45"></span><span
+                        class="ease-[cubic-bezier(0.25, 0.75, 1)] relative mb-1 block h-[2px] w-[30px] bg-black duration-300 opacity-0"></span><span
+                        class="ease-[cubic-bezier(0.25, 0.75, 1)] relative block h-[2px] w-[30px] bg-black duration-300 top-[-6px] -rotate-45"></span></button>
+                <a href="/TheBigProject/client/main-menu/index.html"><img src="/TheBigProject/client/assets/icons/logo.png" alt=""
+                        class="w-[150px] h-[150px]"></a>
+                <a href="/TheBigProject/client/error-page/error.html"
+                    class="font-[roboto] text-[18px] text-[#142C3E] px-5 py-2 border-[1px] border-black rounded-xl font-bold hover:bg-black hover:text-white max-[768px]:border-[0px] max-[768px]:px-0">Подписаться</a>
+            </div>
+            <div class="flex flex-col items-end gap-[18px] top-0 left-0 right-0 bottom-0 ">
+                <div class="flex gap-10 justify-end w-[100%]">
+                    <div class="flex flex-col w-[100%] gap-8">
+                        <div class="menu-item flex flex-col w-[100%] gap-5 ">
+                            <div class="relative group w-[100%]">
+                                <div class="flex items-center justify-between gap-2 w-[100%]">
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="font-[roboto] text-[#224055] text-[20px] w-[100%] h-[26px] font-[500] border-b-1 border-transparent transition-colors hover:border-[#224055]">
+                                        Проекты
+                                    </a>
+                                    <button class="menu-toggle">
+                                        <img class="menu-icon w-[15px] h-2 transition-transform duration-300"
+                                            src="/TheBigProject/client/assets/icons/Vector.png" alt="">
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="dropdown-menu absolute opacity-0 invisible transition-all duration-300 top-full right-0 mt-2 w-[100%] bg-white shadow-lg rounded-xl z-50 max-h-[400px] overflow-y-auto">
+                                    <a href="/TheBigProject/client/projects/project-1/project.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Профилактика
+                                        слепоты у людей с СД в Узбекистане</a>
+                                    <a href="/TheBigProject/client/projects/project-2/project.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Профилактика
+                                        ампутаций нижних конечностей у людей с СД в Узбекистане</a>
+                                    <a href="/TheBigProject/client/projects/project-3/project.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Профилактика
+                                        диабета среди сельского населения Узбекистана</a>
+                                    <a href="/TheBigProject/client/projects/project-4/project.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Стратегия
+                                        профилактики и мониторинга гестационного диабета в Узбекистане</a>
+                                    <a href="/TheBigProject/client/projects/project-5/project.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Улучшение
+                                        контроля диабета и качества жизни детей с диабетом в Узбекистане</a>
+                                    <a href="/TheBigProject/client/projects/project-6/project.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Здоровый
+                                        ребенок – здоровое будущее</a>
+                                    <a href="/TheBigProject/client/projects/project-7/project.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">На
+                                        уровне первичной медико-санитарной помощи: укрепление системы профилактики,
+                                        ранней диагностики лиц из группы риска и диабета среди населения, проживающего в
+                                        отдаленных сельских районах Узбекистана.</a>
+                                    <a href="/TheBigProject/client/projects/project-8/project.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Оценка
+                                        состояния здоровья населения Приаралья и формирование устойчивой мотивации к
+                                        здоровому образу жизни для укрепления их здоровья.</a>
+                                    <a href="/TheBigProject/client/projects/project-9/project.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Повышение
+                                        уровня знаний и навыков самоконтроля среди молодежи с сахарным диабетом 1 типа
+                                        для улучшения их качества и продолжительности жизни</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item flex flex-col w-[100%] gap-5">
+                            <div class="relative group w-[100%]">
+                                <div class="flex items-center justify-between gap-2 w-[100%]">
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="font-[roboto] text-[#224055] text-[20px] w-[100%] h-[26px] font-[500] border-b-1 border-transparent transition-colors hover:border-[#224055]">
+                                        О Нас
+                                    </a>
+                                    <button class="menu-toggle">
+                                        <img class="menu-icon w-[15px] h-2 transition-transform duration-300"
+                                            src="/TheBigProject/client/assets/icons/Vector.png" alt="">
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="dropdown-menu absolute opacity-0 invisible transition-all duration-300 top-full right-0 mt-2 w-[100%] bg-white shadow-lg rounded-xl z-50">
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Способы
+                                        Пожертвования</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Члены
+                                        Правления</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">События</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Программа</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Отчеты о
+                                        Воздействии</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Спонсоры</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Свяжитесь
+                                        с нами</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item flex flex-col w-[100%] gap-5">
+                            <div class="relative group w-[100%]">
+                                <div class="flex items-center justify-between gap-2 w-[100%]">
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="font-[roboto] text-[#224055] text-[20px] w-[100%] h-[26px] font-[500] border-b-1 border-transparent transition-colors hover:border-[#224055]">
+                                        Понимание Диабета
+                                    </a>
+                                    <button class="menu-toggle">
+                                        <img class="menu-icon w-[15px] h-2 transition-transform duration-300"
+                                            src="/TheBigProject/client/assets/icons/Vector.png" alt="">
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="dropdown-menu absolute opacity-0 invisible transition-all duration-300 top-full right-0 mt-2 w-[100%] bg-white shadow-lg rounded-xl z-50">
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Сахарный
+                                        Диабета 1 типа</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Сахарный
+                                        Диабета 2 типа</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Преддиабет</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Гестационный
+                                        Диабет</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Управление
+                                        Диабетом</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Технология
+                                        Лечения Диабета</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Осложнения
+                                        Сахарного Диабета</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Лекарства
+                                        От Диабета</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Осложнения
+                                        Сахарного Диабета</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 hover:rounded-b-xl text-center">Исследования
+                                        Диабета</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item flex flex-col w-[100%] gap-5">
+                            <div class="relative group w-[100%]">
+                                <div class="flex items-center justify-between gap-2 w-[100%]">
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="font-[roboto] text-[#224055] text-[20px] w-[100%] h-[26px] font-[500] border-b-1 border-transparent transition-colors hover:border-[#224055]">
+                                        Профилактика Диабета
+                                    </a>
+                                    <button class="menu-toggle">
+                                        <img class="menu-icon w-[15px] h-2 transition-transform duration-300"
+                                            src="/TheBigProject/client/assets/icons/Vector.png" alt="">
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="dropdown-menu absolute opacity-0 invisible transition-all duration-300 top-full right-0 mt-2 w-[100%] bg-white shadow-lg rounded-xl z-50">
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center rounded-t-xl">Упражнения</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Психологическое
+                                        Здоровье</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Диета и
+                                        Питание</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Образ
+                                        жизни</a>
+                                    <a href="/TheBigProject/client/error-page/error.html"
+                                        class="block px-4 py-3 text-[#224055] hover:bg-gray-100 text-center">Рецепты</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/TheBigProject/client/error-page/error.html"
+                            class="font-[roboto] text-[18px] text-white px-5 py-2 bg-[#26686E] pr-8 rounded-xl h-[52px] items-center justify-center font-bold flex gap-2 hover:bg-[#65b1a0] duration-200"><img
+                                src="/TheBigProject/client/assets/icons/Vector.svg" alt="">Пожертвовать</a>
+                        <a href="/TheBigProject/client/organization/organization.html"
+                            class="font-[roboto] text-[18px] text-white px-5 py-2 bg-gray-500 pr-8 rounded-xl h-[52px] items-center justify-center font-bold flex gap-2 hover:bg-gray-400 duration-200 ">Стать Членом Организации</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <footer class="footer flex flex-col justify-between bg-[#142C3E] w-full h-[400px] px-[1%] max-[768px]:h-[620px]">
+        <div class="w-100% flex flex-end">
+            <a href="/TheBigProject/client/error-page/error.html" target="_blank"
+                class="ms-auto inline-flex items-center hover:bg-[#65b1a0] duration-200 rounded-b-lg bg-primary px-4 pb-3 pt-2 text-lg font-bold bg-[#26686E] text-white ease-in-out hover:bg-green"
+                rel="noreferrer"><span class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="-1 0 24 15">
+                        <title _mstTextHash="799825" _mstHash="387">Сердце</title>
+                        <path fill="white" stroke="#26686E" stroke-width="2" fill-rule="evenodd"
+                            d="M10.991 18c-.04 0-.497-.29-1.016-.643l-1.73-1.18c-.433-.297-1.12-.775-1.528-1.063a71.665 71.665 0 0 1-1.402-1.02c-.364-.274-.89-.688-1.168-.919a20.587 20.587 0 0 1-1.134-1.048 15.216 15.216 0 0 1-.94-1.024 14.42 14.42 0 0 1-.566-.781c-.14-.212-.37-.606-.51-.876-.141-.27-.344-.711-.45-.981a9.062 9.062 0 0 1-.29-.856 11.377 11.377 0 0 1-.166-.794A6.533 6.533 0 0 1 .02 5.703c0-.508.02-.787.074-1.076A6.77 6.77 0 0 1 .3 3.846c.074-.215.22-.555.326-.756.105-.202.292-.507.415-.68.124-.172.356-.447.517-.611.16-.164.45-.417.642-.562.193-.145.574-.377.846-.517C3.32.58 3.75.398 4 .314A7.1 7.1 0 0 1 4.885.09C5.18.04 5.515.02 5.975.02c.484 0 .77.02 1.053.073.214.04.548.123.74.184.194.061.515.191.716.289.2.098.524.287.72.42.195.134.522.41.727.615.243.243.467.519.65.8.155.237.313.473.354.525.073.095.073.095.236-.185a7.3 7.3 0 0 1 .39-.583 5.914 5.914 0 0 1 1.212-1.17c.16-.108.456-.28.656-.38.2-.101.543-.244.763-.318a7.16 7.16 0 0 1 .882-.216c.406-.07.583-.08 1.124-.062a5.72 5.72 0 0 1 1.125.123c.265.056.65.165.857.241.206.077.56.236.789.354.228.119.598.353.82.52.224.169.538.446.698.617.16.17.4.471.535.668.135.197.321.52.414.717.094.198.222.518.286.711.064.193.148.544.187.78.046.277.072.629.072.996 0 .419-.024.703-.091 1.089a9.55 9.55 0 0 1-.202.892 11.11 11.11 0 0 1-.274.778c-.09.225-.277.631-.414.904-.138.273-.397.716-.576.984-.178.269-.468.664-.645.879-.176.214-.55.619-.831.932-.279.233-.874.701-1.324 1.04-.45.338-1.194.878-1.655 1.2-.46.322-1.524 1.054-2.363 1.625-.84.572-1.558 1.04-1.598 1.04Z">
+                        </path>
+                    </svg></span>
+                <font _mstmutation="1" _msttexthash="801658" _msthash="388">Пожертвовать</font>
+            </a>
+        </div>
+        <div
+            class="mx-[auto] w-[100%] flex justify-between items-center h-[100%] max-[768px]:flex-col-reverse max-[768px]:mt-[20px]">
+            <div class="flex flex-col gap-2 w-[50%] h-[100%] justify-center max-[768px]:w-[100%]">
+                <h2 class="text-[28px] font-[500] text-white font-[roboto]">БООИиБСД DiabetUmid</h2>
+                <p class="text-white text-[16px] font-[600] font-[roboto]">Узбекистан, Ташкент<br> Юнусабад 14, дом 22
+                </p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=diabetumid@gmail.com"
+                    class="text-white text-[16px] mt-2 font-[600] w-[260px] underline hover:text-[#65b1a0] font-[roboto]">diabetumid@gmail.com</a>
+                <div class="flex gap-2 mt-[60px] max-[768px]:mt-[30px]">
+                    <a href="https://www.instagram.com/diabetumid/" target="_blank" rel="noreferrer noopener"
+                        class="inline-block" aria-label="Читайте нас в Instagram" _mstaria_label="420407"
+                        _msthash="402"><svg width="32" height="32" viewBox="0 0 48 48" fill="white"
+                            class="transition-colors hover:fill-[#65b1a0]" xmlns="http://www.w3.org/2000/svg">
+                            <title _mstTextHash="1388673" _mstHash="403">Инстаграм</title>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.125 4.70801H32.875C40.1226 4.70801 46 10.5854 46 17.8329V33.5829C46 40.8305 40.1226 46.7078 32.875 46.7078H17.125C9.87738 46.7078 4 40.8305 4 33.5829V17.8329C4 10.5854 9.87738 4.70801 17.125 4.70801ZM32.8732 42.7703C37.9395 42.7703 42.0607 38.6491 42.0607 33.5829V17.8329C42.0607 12.7667 37.9395 8.64549 32.8732 8.64549H17.1232C12.057 8.64549 7.93572 12.7667 7.93572 17.8329V33.5829C7.93572 38.6491 12.057 42.7703 17.1232 42.7703H32.8732Z">
+                            </path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.5 25.708C14.5 19.9094 19.2014 15.208 25 15.208C30.7986 15.208 35.5 19.9094 35.5 25.708C35.5 31.5066 30.7986 36.2079 25 36.2079C19.2014 36.2079 14.5 31.5066 14.5 25.708ZM18.4378 25.7079C18.4378 29.3251 21.383 32.2703 25.0003 32.2703C28.6175 32.2703 31.5628 29.3251 31.5628 25.7079C31.5628 22.088 28.6175 19.1454 25.0003 19.1454C21.383 19.1454 18.4378 22.088 18.4378 25.7079Z">
+                            </path>
+                            <ellipse cx="36.2878" cy="14.4235" rx="1.39912" ry="1.39912"></ellipse>
+                        </svg></a>
+                    <a href="https://www.facebook.com/diabetumid/" target="_blank" rel="noreferrer noopener"
+                        class="inline-block" aria-label="Следите за нами на Facebook" _mstaria_label="378209"
+                        _msthash="398"><svg width="32" height="32" viewBox="0 0 48 48" fill="white"
+                            class="transition-colors hover:fill-[#65b1a0]" xmlns="http://www.w3.org/2000/svg">
+                            <title _mstTextHash="983008" _mstHash="399">Фейсбук</title>
+                            <path
+                                d="M30.2003 10.1032H34.2652V3.0235C33.564 2.92703 31.1521 2.70996 28.3432 2.70996C22.4823 2.70996 18.4675 6.39639 18.4675 13.1718V19.4074H12V27.322H18.4675V47.2365H26.397V27.3239H32.6029L33.5881 19.4093H26.3951V13.9566C26.397 11.6691 27.0129 10.1032 30.2003 10.1032Z">
+                            </path>
+                        </svg></a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 w-[50%] max-[768px]:w-[100%]">
+                <h2 class="text-[32px] font-bold text-white max-[768px]:text-[24px]">Новости, истории, рецепты и многое
+                    другое</h2>
+                <p class="text-[18px] text-white font-[roboto]">Подпишитесь, чтобы получать нашу цифровую рассылку!</p>
+                <form class="mt-8 flex flex-col md:flex-row"><input type="email"
+                        class="focus-visible:ring-ring flex w-full px-3 py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-1 h-16 rounded-lg border-secondary bg-white text-lg font-bold text-black placeholder:font-normal md:rounded-e-none"
+                        placeholder="Введите свой адрес электронной почты*" required="" value=""
+                        _mstplaceholder="511589" _msthash="408"><button
+                        class="inline-flex items-center justify-center transition-colors focus-visible:outline-none bg-[#26696e] focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary py-4 mt-2 h-16 rounded-lg border-0 px-8 text-lg font-bold text-white md:mt-0 md:rounded-s-none hover:bg-green"
+                        type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-mail mr-2 size-6">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        <font _mstmutation="1" _msttexthash="1394133" _msthash="409"> Отправить</font>
+                    </button></form>
+            </div>
+        </div>
+    </footer>
+    <script src="./project.js"></script>
+</body>
+
+</html>
