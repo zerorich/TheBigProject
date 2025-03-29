@@ -144,18 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("✅ Данные успешно сохранены");
 
-            for (let chatId of chatIds) {
-                await fetch(url, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: message,
-                        parse_mode: "Markdown"
-                    })
-                });
-            }
-
             alert("✅ Заявка успешно отправлена!");
 
             // Очистка формы
