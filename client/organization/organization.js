@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Отправляем данные
         try {
-            let response = await fetch("http://localhost:3000/api/sendData", {
+            let response = await fetch("thebigproject-production.up.railway.app/api/sendData", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
