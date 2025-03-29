@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Отправляем данные
         try {
-            let response = await fetch("thebigproject-production.up.railway.app/api/sendData", {
+            let response = await fetch("https://thebigproject-production.up.railway.app/api/sendData", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
@@ -143,22 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!response.ok) throw new Error("Ошибка при отправке данных");
 
             console.log("✅ Данные успешно сохранены");
-
-            // Отправка данных
-            let message = `📩 *Новая заявка!*\n\n` +
-                `👤 *Имя:* ${formData.Имя}\n` +
-                `👤 *Фамилия:* ${formData.Фамилия}\n` +
-                `👤 *Отчество:* ${formData.Отчество}\n` +
-                `🏫 *Место Учёбы/Работы:* ${formData["Место Учёбы/Работы"]}\n` +
-                `📞 *Номер телефона:* ${formData["Номер телефона"]}\n` +
-                `🆔 *Паспорт:* ${formData["Серия и Номер Паспорта"]}\n` +
-                `📌 *Кем Выдан:* ${formData["Кем Выдан"]}\n` +
-                `📅 *Когда Выдан:* ${formData["Когда Выдан"]}\n` +
-                `🩺 *Тип СД:* ${formData["СД"]}`;
-
-            let botToken = "7915125873:AAEvXOF43h_OfIVfLFkExxqJt3ixwcL54vY";
-            let chatIds = ["5879096855", "6394479272"];
-            let url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
             for (let chatId of chatIds) {
                 await fetch(url, {
